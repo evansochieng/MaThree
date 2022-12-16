@@ -1,7 +1,7 @@
 import React from "react";
 import Login from './Login';
-import { Route } from "react-router-dom";
-
+import Home from './Home';
+import Register from "./Register";
 
 function App() {
   return (
@@ -9,6 +9,8 @@ function App() {
     
     <Login/>
      
+      <Home />
+      <Register />
     </div>
   );
 }
