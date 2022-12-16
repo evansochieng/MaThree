@@ -1,5 +1,4 @@
-import Register from "./components/Register";
-
+import Register from "./Register";
 
 function App() {
   return (
