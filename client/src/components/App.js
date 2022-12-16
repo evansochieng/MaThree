@@ -1,11 +1,12 @@
-import logo from '../logo.svg';
-import '../App.css';
+import React from 'react';
 import Home from './Home';
+import Register from "./Register";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Home />
+      <Register />
     </div>
   );
 }
