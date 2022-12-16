@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :vehicles
+  resources :routes
   resources :payments
   resources :drivers
   # Routing logic: fallback requests for React Router.
