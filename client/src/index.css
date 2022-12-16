@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.Container {
+   background-color: #fff;
+ border-radius: 10px;
+ box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+ position: relative;
+ overflow: hidden;
+ width: 678px;
+ max-width: 100%;
+ min-height: 400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #7D8281 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: -20px 0 50px;
+}
