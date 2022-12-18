@@ -10,6 +10,7 @@ const NavBar = () => {
             display: "flex",
             flexDirection: "row",
             backgroundColor: "#B9B7BD",
+            width: "1000px",
           }}
         >
           <div>
@@ -24,14 +25,27 @@ const NavBar = () => {
               height: "50px",
               display: "flex",
               justifyContent: "flex-end",
-              float: "right",
+              float: "right"
             }}
           >
-            <button>Home</button>
-            <button>About</button>
-            <button>Book</button>
-            <button>Contact</button>
-            <button>Logout</button>
+            <NavLink to="/" exact="true">
+              Home
+            </NavLink>
+            <NavLink to="/about" exact="true">
+              About
+            </NavLink>
+            <NavLink to="/book" exact="true">
+              Book
+            </NavLink>
+            <NavLink to="/contact" exact="true">
+              Contact
+            </NavLink>
+            <NavLink to="/signup" exact="true">
+              Signup
+            </NavLink>
+            <NavLink to="/logout" exact="true">
+              Logout
+            </NavLink>
           </div>
         </div>
       </div>
