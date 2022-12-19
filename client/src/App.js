@@ -7,6 +7,7 @@ import Book from "./components/Book";
 import Contact from "./components/Contact";
 import Logout from "./components/Logout";
 import NavBar from './components/NavBar';
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/signup" element={<Register />} />
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/book" element={<Book />} />
         <Route exact path="/contact" element={<Contact />} />
