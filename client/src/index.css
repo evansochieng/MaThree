@@ -16,7 +16,7 @@ label {
   margin-bottom: 1rem;
 }
 
-.login-route {
+.auth-route {
   margin-top: 1rem;
   text-align: center;
   color: white;
@@ -63,6 +63,11 @@ body {
 
 .navbar {
   margin-right: -100px;
+}
+
+.login-btn {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 
