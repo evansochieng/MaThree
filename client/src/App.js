@@ -6,6 +6,7 @@ import About from "./components/About";
 import Book from "./components/Book";
 import Contact from "./components/Contact";
 import Logout from "./components/Logout";
+import Login from "./components/Login"
 import NavBar from './components/NavBar';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/signup" element={<Register />} />
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/book" element={<Book />} />

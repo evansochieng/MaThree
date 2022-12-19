@@ -55,6 +55,9 @@ const NavBar = () => {
             <NavLink to="/signup" exact="true" style={linkStyles}>
               Signup
             </NavLink>
+            <NavLink to="/login" exact="true" style={linkStyles}>
+              Login
+            </NavLink>
             <NavLink to="/logout" exact="true" style={linkStyles}>
               Logout
             </NavLink>
