@@ -15,8 +15,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/signup" element={<Register />} />
-        <Route exact path="/login" element={<Login />} />
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/book" element={<Book />} />
         <Route exact path="/contact" element={<Contact />} />
