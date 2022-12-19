@@ -48,6 +48,10 @@ body {
   display: flex;
 }
 
+.navbar {
+  margin-right: -100px;
+}
+
 
 
 @media screen and (min-width: 600px) {
