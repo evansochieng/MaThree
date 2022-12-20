@@ -1,10 +1,16 @@
 class CommutersController < ApplicationController
   before_action :set_commuter, only: [:show, :update, :destroy]
 
+  # handle errors
+rescue_from ActiveRecord::RecordInvalid, with: :handle_invalid_response
+rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
+
   # GET /commuters
   def index
+    # get the list of all commuters
     @commuters = Commuter.all
 
+    # return the commuters
     render json: @commuters
   end
 
@@ -13,15 +19,22 @@ class CommutersController < ApplicationController
     render json: @commuter
   end
 
+  #Autologin / Stay logged in
+  def autologin
+     @commuter = Commuter.find_by(id: session[:user_id])
+     if @commuter
+      render json: @commuter, status: :ok
+    else
+      render json: { errors: ["Not authorized"] }, status: :unauthorized
+    end
+  end
+
   # POST /commuters
   def create
-    @commuter = Commuter.new(commuter_params)
+    # create a new user
+    @commuter = Commuter.create!(commuter_params)
 
-    if @commuter.save
-      render json: @commuter, status: :created, location: @commuter
-    else
-      render json: @commuter.errors, status: :unprocessable_entity
-    end
+    render json: @commuter, status: :created
   end
 
   # PATCH/PUT /commuters/1
@@ -46,6 +59,16 @@ class CommutersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def commuter_params
-      params.permit(:name, :phone_number, :address)
+      params.permit(:name, :username, :id_number, :phone_number, :address, :password,:password_confirmation)
+    end
+
+    # Not Found Error
+    def handle_not_found_response
+      return json: {error: "Commuter not found"}, status: :not_found
+    end
+
+    # Invalid Error
+    def handle_invalid_response(e)
+      return json: {error: e.record.errors.full_messages}, status: unprocessable_entity
     end
 end
