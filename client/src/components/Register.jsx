@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GrCheckbox } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,7 @@ const Register = () => {
 
   return (
     <div className="auth-form-container">
+      <h1 className="app-title">Mathree</h1>
       <div className="SignUpController">
         <form className="register-form">
           <h1>Create Account</h1>
@@ -85,6 +87,9 @@ const Register = () => {
           </span>
           <p> I agree to all terms and conditions </p>
         </div>
+      </div>
+      <div>
+        <p>Already have an account? <Link to='/login' className="auth-route">Login</Link></p>
       </div>
     </div>
   );
