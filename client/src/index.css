@@ -2,7 +2,14 @@
 
 body {
   color: white;
-  background: #000;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #1a1a1a,
+    #000000,
+    #000000,
+    #666666
+  );
 }
 
 /* Styling for AUTH component */
@@ -24,7 +31,7 @@ label {
 .app-title {
   font-family: "Great Vibes", cursive;
   font-size: 3.5rem;
-  margin-bottom: 1rem;
+  margin-top: 6rem;
 }
 
 .auth-route {
@@ -130,12 +137,14 @@ button {
   padding-left: 1rem;
   padding-right: 1rem;
   position: fixed;
-  background-color: #000;
+  background-image: linear-gradient(to bottom, #000000, #1a1a1a);
 }
 
-.nav-list {
-  display: none;
+ul {
+list-style: none;
+color: #ADACB5;
 }
+
 
 .nav-items {
   padding-left: 1rem;
@@ -184,16 +193,77 @@ button {
 
 /* End of styling of the Navbar component */
 
+/* Styling of About Component */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-top: 3.5rem;
+}
+
+.about-image {
+  margin-top: 1rem;
+  border-radius: 2rem;
+  margin-left: 4.5rem;
+  margin-right: auto;
+  width: 100%;
+}
+
+.about_us{
+  background-color: #ADACB5;
+  color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.mission_vision{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.image_values{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.mission_container{
+  border-bottom: 0.5rem solid  #ADACB5;
+  box-shadow: 3px 2px  #ADACB5;
+  margin: 1rem 3rem;
+  padding: 1rem 3rem;
+}
+.mission{
+  font-weight: 500;
+  font-size: x-large;
+}
+.vision_container{
+  border-bottom: 0.5rem solid  #ADACB5;
+  box-shadow: 3px 2px  #ADACB5;
+  margin: 1rem 3rem;
+  padding: 1rem 3rem;
+  
+}
+.vision{
+  font-weight: 500;
+  font-size: x-large;
+}
+
+/*End of About Component */
+
 /* Styling for media adaptivity */
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   .auth-form-container {
     padding: 5rem;
     border: 1px solid white;
     border-radius: 10px;
     margin: 0.5rem;
   }
-}
+} */
 
 @media (min-width: 768px) {
   .home-layout {
