@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-.auth-form-container, .login-form, .register-form {
+body {
+  color: white;
+  background: #000;
+}
+
+/* Styling for AUTH component */
+
+.auth-form-container,
+.login-form,
+.register-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
@@ -11,7 +22,7 @@ label {
 }
 
 .app-title {
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
@@ -43,16 +54,6 @@ button {
   box-sizing: border-box;
 }
 
-body {
-   text-align: center;
-  display: flex;
-  /*min-height: 100vh;*/
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: #7D8281;
-}
-
 #cnfpassword {
   margin-bottom: 3rem;
 }
@@ -70,7 +71,120 @@ body {
   margin-bottom: 1rem;
 }
 
+/* End of Styling for AUTH component */
 
+/* Styling for HOME component */
+
+.home-cover {
+  height: 100vh;
+  width: 100%;
+}
+
+.home-layout {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.home-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.home-text {
+  padding-bottom: 1rem;
+  max-width: 28rem;
+}
+
+.heroImage {
+  border-radius: 1rem;
+  margin-left: 4.5rem;
+  margin-right: auto;
+  width: 67%;
+}
+
+/* Styling for the Navbar component */
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: fixed;
+  background-color: #000;
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-items {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition-duration: 300ms;
+}
+
+.nav-image {
+  border-radius: 2rem;
+  margin-top: auto;
+  padding-top: 105px;
+}
+
+.icon-options {
+  cursor: pointer;
+  padding-right: 1rem;
+  z-index: 10;
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.nav-mobile-items {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+/* End of styling of the Navbar component */
+
+/* Styling for media adaptivity */
 
 @media screen and (min-width: 600px) {
   .auth-form-container {
@@ -78,5 +192,36 @@ body {
     border: 1px solid white;
     border-radius: 10px;
     margin: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-layout {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 640px) {
+  .home-title {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+}
+.heroImage {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon-options {
+    display: none;
   }
 }
