@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Seed the db with data for routes
+route1 = Route.create(
+    name: "Thika Road 1", from: "Thika", to: "UpperHill", 
+    description: "Route from Thika town, through Thika Road, upto UpperHill and its environments.",
+    fare: 150
+)
+
+route2 = Route.create(
+    name: "Waiyaki Way 1", from: "Kikuyu", to: "UpperHill", 
+    description: "Route from Kikuyu town, through Waiyaki Way, upto UpperHill and its environments.",
+    fare: 150
+)
+
+route3 = Route.create(
+    name: "Jogoo Road 1", from: "Donholm", to: "UpperHill", 
+    description: "Route from Donholm, through Jogoo Road, upto UpperHill and its environments.",
+    fare: 150
+)
+
+route4 = Route.create(
+    name: "Mombasa Road 1", from: "Kitengela", to: "UpperHill", 
+    description: "Route from Kitengela, through Mombasa Road, upto UpperHill and its environments.",
+    fare: 150
+)
+
+route5 = Route.create(
+    name: "Ngong Road 1", from: "Karen", to: "Westlands", 
+    description: "Route from Karen, through Ngong Road, UpperHill, upto Westlands and its environments.",
+    fare: 150
+)
