@@ -2,14 +2,7 @@
 
 body {
   color: white;
-  background-image: linear-gradient(
-    to bottom,
-    #000000,
-    #1a1a1a,
-    #000000,
-    #000000,
-    #666666
-  );
+  background: #000;
 }
 
 /* Styling for AUTH component */
@@ -254,6 +247,28 @@ color: #ADACB5;
 
 /*End of About Component */
 
+/* Styling Book Component */
+.book-container {
+  /* display: flex; */
+  flex-direction: column;
+   justify-content: center;
+  height: 100%; 
+  align-items: center;
+  padding-top: 15rem;
+}
+.book-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: white;
+}
+.book-route{
+  width: 100%;
+  margin-top: 1.25rem;
+}
+/* End of styling Book component */
+
 /* Styling for media adaptivity */
 
 /* @media screen and (min-width: 600px) {
@@ -294,4 +309,126 @@ color: #ADACB5;
   .icon-options {
     display: none;
   }
+}
+@media (min-width: 640px) {
+    .book-route {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .book-route {
+        max-width: 768px;
+    }
+}
+@media (min-width: 640px) {
+    .controller {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .controller {
+        max-width: 768px;
+    }
+}
+
+
+/* Step Styling */
+.step-layout{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.step-wrapper{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.alt-wrapper{
+  display: flex;
+  align-items: center;
+}
+.step-items{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: teal;
+}
+.dis-num {
+  border-radius: 9999px;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  border: 2px solid gray;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.dis-desc {
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  margin-top: 4rem;
+  width: 8rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.dis-line {
+  flex: 1 1 auto;
+  border-top-width: 1rem;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+.controller {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.bck-btn {
+  background: white;
+  color: gray;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-width: 2px;
+  border-color: gray;
+}
+
+.bck-btn:hover{
+  background-color: gray;
+  color: white;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+.nxt-btn{
+  background: blue;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nxt-btn:hover{
+  background: gray;
+  color: white;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }
