@@ -64,11 +64,11 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
 
     # Not Found Error
     def handle_not_found_response
-      return json: {error: "Commuter not found"}, status: :not_found
+      render json: {error: "Commuter not found"}, status: :not_found
     end
 
     # Invalid Error
     def handle_invalid_response(e)
-      return json: {error: e.record.errors.full_messages}, status: unprocessable_entity
+      render json: {error: e.record.errors.full_messages}, status: :unprocessable_entity
     end
 end

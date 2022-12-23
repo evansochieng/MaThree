@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :orders
   # routes for resources
   resources :vehicles
   resources :routes
