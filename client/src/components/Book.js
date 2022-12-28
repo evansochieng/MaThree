@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import Info from './Form/Info'
-import Payment from './Form/Payment'
-import Summary from './Form/Summary'
-import Stepper from './Stepper'
-import StepperControl from './StepperControl'
+import React, { useState } from "react";
+import Info from "./Form/Info";
+import Payment from "./Form/Payment";
+import Summary from "./Form/Summary";
+import Stepper from "./Stepper";
+import {StepperContext} from "./context/StepperContext"
+import StepperControl from "./StepperControl";
 
 function Book() {
 
@@ -16,12 +17,10 @@ function Book() {
   const [returnTrip, setReturnTrip] = useState("");
 
   const [currentStep, setCurrentStep] = useState(1);
+  const [userData, setUserData] = useState('');
+  const [finalData, setFinalData] = useState([]);
 
-  const steps = [
-    "Personal Information",
-    "Payment",
-    "Complete"
-  ]
+  const steps = ["Personal Details", "Summary", "Payment"];
 
   const displaystep = (step) => {
     switch (step) {
@@ -33,21 +32,41 @@ function Book() {
         return <Summary />;
       default:
     }
-  }
+  };
+
+  const handleClick = (direction) => {
+    let newStep = currentStep;
+
+    direction === "next" ? newStep++ : newStep--;
+    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+  };
 
   return (
-    <div className='book-container'>
-      <div className='book-wrapper'>
-        <div className='book-route'>
-          <Stepper
-            steps={steps}
-            currentStep={currentStep}
-          />
+    <div className="book-container">
+      <div className="book-wrapper">
+        <div className="book-route">
+          <Stepper steps={steps} currentStep={currentStep} />
+
+          {/*Display Components */}
+          <div className="context">
+            <StepperContext.Provider value={{
+              userData,
+              setUserData,
+              finalData,
+              setFinalData
+            }}>
+              {displaystep(currentStep)}
+            </StepperContext.Provider>
+          </div>
         </div>
-        <StepperControl />
-      </div> 
+        <StepperControl
+          handleClick={handleClick}
+          currentStep={currentStep}
+          steps={steps}
+        />
+      </div>
     </div>
-  )
+  );
 }
 
 export default Book
