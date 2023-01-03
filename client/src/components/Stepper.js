@@ -71,15 +71,31 @@ const Stepper = ({ steps, currentStep }) => {
         }
       >
         <div className="step-items">
-          <div className="dis-num">1</div>
-          <div className="dis-desc">Description</div>
+          <div className={`dis-num ${step.selected ? "if-select" : ""}`}>
+            {step.completed ? (
+              <span className="unknown">&#10003;</span>
+            ) : (
+              index + 1
+            )}
+          </div>
+          <div
+            className={`dis-desc ${step.highlighted ? "des-co" : "des-co2"}`}
+          >
+            {step.description}
+          </div>
         </div>
-        <div className="dis-line">{/*Display line*/}</div>
+        <div className={`dis-line ${step.completed ? "line-co" : "line-co2"}`}>
+          {/*Display line*/}
+        </div>
       </div>
     );
   });
 
-  return <div className="step-layout">{displaySteps}</div>;
+  return (
+    <div className="stepper-container">
+      <div className="step-layout">{displaySteps}</div>
+    </div>
+  );
 };
 
 export default Stepper;

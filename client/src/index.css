@@ -345,7 +345,14 @@ ul {
 
 
 /* Step Styling */
-.step-layout {
+.step-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.5rem;
+}
+.step-layout{
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 1rem;
@@ -374,14 +381,14 @@ ul {
 }
 
 .dis-num {
-  border-radius: 9999px;
+  border-radius: 10px;
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
   border: 2px solid gray;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* height: 3rem; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -496,3 +503,39 @@ ul {
   border-bottom: 3px solid wheat;
 }
    
+.if-select {
+  background: green;
+  color: white;
+  font-weight: 700;
+  border: 1px solid green;
+}
+.unknown {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.des-co {
+  color: #000;
+}
+.des-co2 {
+  color: gray;
+}
+.line-co{
+  background: green;
+}
+.line-co2 {
+  background: gray;
+}
+.bck-click {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.context {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem;
+}
+.info{
+  color: #000;
+}
