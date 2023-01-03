@@ -1,10 +1,21 @@
 import React from "react";
+import {useState, useEffect} from "react"
 import mathreeLogo from "../mathreelogo.png";
+import Added from "./Added"
+import {Routes} from "./Data"
 
 
 const Home = () => {
+  
+    const [routes,setRoutes] = useState(Routes)
+    
+    
+    
 
-    return (
+
+
+// // }
+    return ( 
         <div name='home' className="home-cover">
             <div className="home-layout">
                 <div className="home-container">
@@ -16,9 +27,26 @@ const Home = () => {
                     <img src={mathreeLogo} alt='mathree-logo' className="heroImage"/>
                 </div>
             </div>
-        </div>
+            <hr/>
+            <div>
+                <h1>Major Routes</h1>
+          <div>
+          { routes.map((route, id) => (
+            <Added {...route} key={id} />
+          ))} 
+
+          
+          </div>
+            </div>
+            
+            </div>
+            
+            
+
+            
+           
     )
 
-}
+    }
 
 export default Home;
