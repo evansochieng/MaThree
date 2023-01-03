@@ -14,10 +14,10 @@ function Addd({name, from,to ,description, fare}) {
     </thead>
 
     <tbody>
-        <tr>{from}</tr>
-        <tr>{to}</tr>
-        <tr>{description}</tr>
-        <tr>{fare}</tr>
+        <tr> From :  {from}</tr>
+        <tr> To: {to}</tr>
+        <tr> description:{description}</tr>
+        <tr> Fare:  {fare}</tr>
     </tbody>
 </table>
   )
