@@ -1,5 +1,5 @@
 class RoutesController < ApplicationController
-  before_action :set_route, only: [:index, :show, :update, :destroy]
+  before_action :set_route, only: [ :show, :update, :destroy]
 
     # handle errors
 rescue_from ActiveRecord::RecordInvalid, with: :handle_invalid_response
@@ -7,10 +7,10 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
 
   # GET /routes
   def index
-    # @routes = Route.all
+    @routes = Route.all
 
-    # render json: @routes
-    render json: Route.all , status: :ok
+    render json: @routes
+    
   end
 
   # GET /routes/1
