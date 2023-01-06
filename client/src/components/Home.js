@@ -1,13 +1,20 @@
 import React from "react";
 import {useState, useEffect} from "react"
 import mathreeLogo from "../mathreelogo.png";
-import Added from "./Added"
-import {Routes} from "./Data"
+import Added from "./Added";
+
 
 
 const Home = () => {
   
-    const [routes,setRoutes] = useState(Routes)
+    const [routes,setRoutes] = useState([])
+
+    useEffect(() => {
+        fetch("/routes")
+        .then((res) => res.json())
+        .then((data) => setRoutes(data))
+      }, [])
+      
     
     
     

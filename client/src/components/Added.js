@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Addd({name, from,to ,description, fare}) {
+function Added({name, from,to ,description, fare}) {
 
     
   return (
@@ -23,4 +23,4 @@ function Addd({name, from,to ,description, fare}) {
   )
 }
 
-export default Addd
+export default Added
