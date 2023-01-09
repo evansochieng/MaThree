@@ -5,12 +5,12 @@ function Info() {
   const [routes, setRoutes] = useState([])
 
   // make a fetch request for routes
-  useEffect(() => {
+useEffect(() => {
     fetch("/routes")
     .then((res) => res.json())
     .then((data) => setRoutes(data))
   }, [])
-
+  
   return (
     <div>
       <div>

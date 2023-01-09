@@ -1,5 +1,5 @@
 class RoutesController < ApplicationController
-  before_action :set_route, only: [:show, :update, :destroy]
+  before_action :set_route, only: [ :show, :update, :destroy]
 
     # handle errors
 rescue_from ActiveRecord::RecordInvalid, with: :handle_invalid_response
@@ -10,6 +10,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
     @routes = Route.all
 
     render json: @routes
+    
   end
 
   # GET /routes/1
@@ -42,7 +43,8 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_route
-      @route = Route.find(params[:id])
+       @route = Route.find(params[:id])
+      
     end
 
     # Only allow a list of trusted parameters through.
