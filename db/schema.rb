@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_23_040603) do
+ActiveRecord::Schema.define(version: 2023_01_09_005533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,13 +36,13 @@ ActiveRecord::Schema.define(version: 2022_12_23_040603) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "name_id"
-    t.integer "phone_number_id"
+    t.string "name"
+    t.integer "phone_number"
     t.string "route"
     t.string "pickup_station"
     t.string "destination"
     t.string "return_trip"
-    t.integer "fare_id"
+    t.integer "fare"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2022_12_23_040603) do
   create_table "payments", force: :cascade do |t|
     t.integer "amount"
     t.date "time"
-    t.integer "user_id"
+    t.integer "commuter_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
