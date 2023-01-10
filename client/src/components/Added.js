@@ -16,7 +16,7 @@ function Added({name, from,to ,description, fare}) {
     <tbody>
         <tr> From :  {from}</tr>
         <tr> To: {to}</tr>
-        <tr> description:{description}</tr>
+        <tr> Description: {description}</tr>
         <tr> Fare:  {fare}</tr>
     </tbody>
 </table>

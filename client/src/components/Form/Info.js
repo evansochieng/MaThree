@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react'
 
-function Info() {
+function Info({ values, handleChange, nextStep, prevStep }) {
   // define state for routes
   const [routes, setRoutes] = useState([])
+  const nextPage = e => {
+    e.preventDefault();
+    nextStep();
+  }
+
+  const previous = e => {
+    e.preventDefault();
+    prevStep();
+  }
 
   // make a fetch request for routes
 useEffect(() => {
     fetch("/routes")
-    .then((res) => res.json())
-    .then((data) => setRoutes(data))
+      .then((res) => res.json())
+      .then((data) => setRoutes(data))
   }, [])
   
   return (
@@ -38,6 +47,8 @@ useEffect(() => {
         <input
           type="text"
           name="name"
+          onChange={handleChange('fullName')}
+          defaultValue={values.fullName}
           style={{ width: "300px", height: "10px", marginTop: "5px" }}
         />
         <br />
@@ -46,6 +57,8 @@ useEffect(() => {
         <input
           type="text"
           name="contact"
+          onChange={handleChange('mobile')}
+          defaultValue={values.mobile}
           style={{ width: "300px", height: "10px", marginTop: "5px" }}
         />
         <br />
@@ -73,6 +86,8 @@ useEffect(() => {
         <input
           type="text"
           name="pickup"
+          onChange={handleChange('pickLocation')}
+          defaultValue={values.pickLocation}
           style={{ width: "300px", height: "10px", marginTop: "5px" }}
         />
         <br />
@@ -81,6 +96,8 @@ useEffect(() => {
         <input
           type="text"
           name="dropoff"
+          onChange={handleChange('dropLocation')}
+          defaultValue={values.dropLocation}
           style={{ width: "300px", height: "10px", marginTop: "5px" }}
         />
         <br />
@@ -92,6 +109,10 @@ useEffect(() => {
           style={{ marginTop: "5px" }}
         />
       </div>
+      <button
+      onClick={nextPage}>
+        continue
+      </button>
     </div>
   );
 }
