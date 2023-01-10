@@ -1,36 +1,47 @@
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
 
 function Summary() {
+
+  // add states for the order details
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
+  const [route, setRoute] = useState("");
+  const [pickup, setPickup] = useState("");
+  const [destination, setDestination] = useState("");
+  const [returnTrip, setReturnTrip] = useState("");
+  const [fare, setFare] = useState("");
+
   return (
     <div>
       <div>
         <h3>Trip Summary</h3>
         <label htmlFor="">
-          Name: Evans Ochieng {"name state to be rendered here"}
+          Name: {name} {"name state to be rendered here"}
         </label>
         <br />
         <label htmlFor="">
-          Phone number: 0704999704 {"phone number state to be rendered here"}
+          Phone number: {contact} {"phone number state to be rendered here"}
         </label>
         <br />
         <label htmlFor="">
-          Route: Kikuyu &#8594; UpperHill {"route state to be rendered here"}
+          Route: {route} {"route state to be rendered here"}
         </label>
         <br />
         <label htmlFor="">
-          Pickup location: Kinoo 87 {"pickup state to be rendered here"}
+          Pickup location: {pickup} {"pickup state to be rendered here"}
         </label>
         <br />
         <label htmlFor="">
-          Destination: Kilimani {"destination state to be rendered here"}
+          Destination: {destination} {"destination state to be rendered here"}
         </label>
         <br />
         <label htmlFor="">
-          Return Trip: Yes {"returnTrip state to be rendered here"}
+          Return Trip: {returnTrip} {"returnTrip state to be rendered here"}
         </label>
         <br />
         <label htmlFor="">
-          Fare: Ksh. 150 {"fare state to be rendered here"}
+          Fare: Ksh. {fare} {"fare state to be rendered here"}
         </label>
         <br />
         <div style={{ marginTop: "10px" }}>
