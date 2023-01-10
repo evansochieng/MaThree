@@ -540,9 +540,55 @@ ul {
   color: #000;
 }
 .contact-container{
-  background-color: rgb(53, 48, 48);
+  background-color: black;
   text-align: center;
   justify-content: center;
   font-size: 1em;
 
 }
+/* //stylying footer */
+.footer{
+  background-color: rgb(139, 129, 129);
+  height:135px;
+ 
+  text-align: center;
+  justify-content: center;
+}
+
+
+/*STYLING CONTACT US PAGE */
+
+
+.--align-center {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Center Text */
+.--text-center {
+  text-align: center;
+}
+
+.--form-control input {
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 8px 1rem;
+  border: 1px solid #777;
+  border-radius: 3px;
+  outline: none;
+} 
+
+
+
+
+.message-here{
+  height: 150px;
+  width: 400px;
+}
+.btn--btn{
+  color: beige;
+  background-color: rgb(47, 0, 255);
+  position: relative;
+}
+

@@ -1,6 +1,7 @@
 import React from "react";
 import mathreeLogo from "../mathreelogo.png";
 
+
 const About = () => {
   return (
     <div className="about-container">
@@ -49,6 +50,7 @@ const About = () => {
               </ul>
             </div>
           </section>
+          
         </div>
       </div>
     </div>

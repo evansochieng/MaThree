@@ -41,17 +41,11 @@ const Home = () => {
           { routes.map((route, id) => (
             <Added {...route} key={id} />
           ))} 
-
-          
-          </div>
-            </div>
-            
-            </div>
-            
-            
-
-            
            
+           </div>
+           </div>
+            </div>
+                 
     )
 
     }
