@@ -14,12 +14,12 @@ function Info({ values, handleChange, nextStep, prevStep }) {
   }
 
   // make a fetch request for routes
-  useEffect(() => {
+useEffect(() => {
     fetch("/routes")
       .then((res) => res.json())
       .then((data) => setRoutes(data))
   }, [])
-
+  
   return (
     <div>
       <div>

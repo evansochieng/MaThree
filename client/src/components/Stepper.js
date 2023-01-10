@@ -21,7 +21,7 @@ const Stepper = ({ steps, currentStep }) => {
       }
       //step completed
       else if (count < stepNumber) {
-        newSteps[count] = {
+          newSteps[count] = {
           ...newSteps[count],
           highlighted: false,
           selected: true,
