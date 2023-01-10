@@ -1,6 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 
+//load card components
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+
+
 function Summary() {
 
   // add states for the order details
@@ -13,60 +19,123 @@ function Summary() {
   const [fare, setFare] = useState("");
 
   return (
-    <div>
-      <div>
-        <h3>Trip Summary</h3>
-        <label htmlFor="">
-          Name: {name} {"name state to be rendered here"}
-        </label>
-        <br />
-        <label htmlFor="">
-          Phone number: {contact} {"phone number state to be rendered here"}
-        </label>
-        <br />
-        <label htmlFor="">
-          Route: {route} {"route state to be rendered here"}
-        </label>
-        <br />
-        <label htmlFor="">
-          Pickup location: {pickup} {"pickup state to be rendered here"}
-        </label>
-        <br />
-        <label htmlFor="">
-          Destination: {destination} {"destination state to be rendered here"}
-        </label>
-        <br />
-        <label htmlFor="">
-          Return Trip: {returnTrip} {"returnTrip state to be rendered here"}
-        </label>
-        <br />
-        <label htmlFor="">
-          Fare: Ksh. {fare} {"fare state to be rendered here"}
-        </label>
-        <br />
-        <div style={{ marginTop: "10px" }}>
-          <button
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
+      <h4>Trip Summary</h4>
+      <Card
+        style={{
+          width: 400,
+          backgroundColor: "#fff",
+        }}
+      >
+        <CardContent>
+          <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            <span style={{ float: "left" }}>Name:</span>
+            <span style={{ float: "right" }}>Evans Ochieng</span>
+          </div>
+          <br />
+          <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            <span style={{ float: "left" }}>Phone number:</span>
+            <span style={{ float: "right" }}>+254 704 999 704</span>
+          </div>
+          <br />
+          <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            <span style={{ float: "left" }}>Route:</span>
+            <span style={{ float: "right" }}>Kikuyu &#8594; Upperhill</span>
+          </div>
+          <br />
+          <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            <span style={{ float: "left" }}>Pickup Stage:</span>
+            <span style={{ float: "right" }}>Kinoo 87</span>
+          </div>
+          <br />
+          <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            <span style={{ float: "left" }}>Destination:</span>
+            <span style={{ float: "right" }}>Kilimani Police Station</span>
+          </div>
+          <br />
+          <div style={{ fontWeight: "bold" }}>
+            <span style={{ float: "left" }}>Return Trip:</span>
+            <span style={{ float: "right" }}>Yes</span>
+          </div>
+          <br />
+          <div
             style={{
-              width: "80px",
-              height: "10px",
-              marginRight: "30px",
-              textAlign: "center",
-              font: "bold",
+              backgroundColor: "#ee7a11",
+              height: "50px",
+              paddingTop: "15px",
+              fontWeight: "bolder",
+              marginBlockStart: "30px",
+              textAlign: "center"
             }}
           >
-            Pay
-          </button>
-          <button
-            style={{
-              width: "80px",
-              height: "10px",
-              textAlign: "center",
-              font: "bold",
-            }}
+            Fare: Ksh. 150
+          </div>
+          <br />
+        </CardContent>
+        <CardActions>
+          {/* <div
+            style={{ marginTop: "10px", display: "flex", flexDirection: "row" }}
           >
-            Cancel
-          </button>
-        </div>
+            <button
+              style={{
+                width: "80px",
+                height: "10px",
+                marginRight: "200px",
+                textAlign: "center",
+                fontWeight: "bold",
+                backgroundColor: "#ee7a11",
+                marginLeft: "10px",
+              }}
+            >
+              Pay
+            </button>
+            <button
+              style={{
+                width: "80px",
+                height: "10px",
+                textAlign: "center",
+                fontWeight: "bold",
+                backgroundColor: "#ee7a11",
+                marginRight: "10px",
+              }}
+            >
+              Cancel
+            </button>
+          </div> */}
+        </CardActions>
+      </Card>
+      <div style={{ marginTop: "10px" }}>
+        <button
+          style={{
+            width: "80px",
+            height: "10px",
+            marginRight: "200px",
+            textAlign: "center",
+            fontWeight: "bold",
+            backgroundColor: "#ee7a11",
+            marginLeft: "15px",
+          }}
+        >
+          Pay
+        </button>
+        <button
+          style={{
+            width: "80px",
+            height: "10px",
+            textAlign: "center",
+            fontWeight: "bold",
+            backgroundColor: "#ee7a11",
+            marginRight: "10px",
+          }}
+        >
+          Cancel
+        </button>
       </div>
     </div>
   );
