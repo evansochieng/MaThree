@@ -1,26 +1,28 @@
 import React from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faFacebook, faGithub,faYoutube,faTelegram, faTwitter,faTiktok,faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 function Contact() {
   return (
-    <div className="about-container">
-    <div className="about-layout">
-      <h1 className="about_us">CONTACTS</h1>
+    <div className="contact-container">
+    <div className="contact-layout">
+      <h1 className="contacts">CONTACTS</h1>
       <div>
-        <section className="mission_vision">
+        <section className="office-container">
          
-          <div className="mission_container">
-            <p className="mission">OUR OFFICES</p>
+          <div className="office-container">
+            <p className="offices">OUR OFFICES</p>
             <p>
-              Our offices are based in Nairobi in Garden City Business Park,
+              Our offices are based in Nairobi, Garden City Business Park,
               3rd Floor, office number 309
 
             </p>
-            <p>Our team  led by our C.E.O  Dr. Ochieng Evans and his  deputy Dr. Mr Onyango George</p>
+            <p>Our team  led by our C.E.O  Dr. Ochieng Evans and his  deputy Mr Onyango George</p>
             <p>The rest of the administration team is a follows:
               <li>
                <ul> Madam Charity Nelima: Chief Operational Manager and handles all administrative roles</ul>
-              <ul>  Prof. Riddick Angela : Head of Company's displinary Commitee</ul>
-              <ul> Mr Nthiga Denis: Directing Manager </ul>
+              <ul>  Mr. Riddick Angela : Head of Company's displinary Commitee</ul>
+              <ul> Sir Nthiga Denis: Directing Manager </ul>
               </li>
             </p>
 
@@ -41,6 +43,15 @@ function Contact() {
               </p>
           </div>
         </section>
+        <div className ="icons ">
+          <FontAwesomeIcon icon ={faYoutube}></FontAwesomeIcon>
+          <FontAwesomeIcon icon ={faTwitter}></FontAwesomeIcon>
+          <FontAwesomeIcon icon ={faTelegram}></FontAwesomeIcon>
+          <FontAwesomeIcon icon ={faTiktok}></FontAwesomeIcon>
+          <FontAwesomeIcon icon ={faFacebook}></FontAwesomeIcon>
+          <FontAwesomeIcon icon ={faInstagram}></FontAwesomeIcon>
+          <FontAwesomeIcon icon ={faGithub}></FontAwesomeIcon>
+        </div>
         </div>
         </div>
         </div>

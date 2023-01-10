@@ -539,3 +539,10 @@ ul {
 .info{
   color: #000;
 }
+.contact-container{
+  background-color: rgb(53, 48, 48);
+  text-align: center;
+  justify-content: center;
+  font-size: 1em;
+
+}
