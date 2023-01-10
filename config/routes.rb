@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :orders
   # routes for resources
   resources :vehicles
   resources :routes
   resources :payments
   resources :drivers
   resources :commuters
+  resources :orders
 
   # add routes for authentication
   post "/login", to: "sessions#create"
