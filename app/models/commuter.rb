@@ -1,8 +1,9 @@
 class Commuter < ApplicationRecord
-    # # add associations
-    # belongs_to :route
-    # belongs_to :vehicle
+    # add associations
+    belongs_to :route
+    belongs_to :vehicle
 
+    # for password confirmation
     has_secure_password
 
     # add validations
