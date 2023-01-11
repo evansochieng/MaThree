@@ -15,16 +15,16 @@ function Footer() {
                        
         </div>
         <hr/>
-    <div >
+    <div className='icons_container' >
 
 
-          <FontAwesomeIcon icon ={faYoutube}></FontAwesomeIcon>
-          <FontAwesomeIcon icon ={faTwitter}></FontAwesomeIcon>
-          <FontAwesomeIcon icon ={faTelegram}></FontAwesomeIcon>
-          <FontAwesomeIcon icon ={faTiktok}></FontAwesomeIcon>
-          <FontAwesomeIcon icon ={faFacebook}></FontAwesomeIcon>
-          <FontAwesomeIcon icon ={faInstagram}></FontAwesomeIcon>
-          <FontAwesomeIcon icon ={faGithub}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icons' icon  ={faYoutube} pull="left"></FontAwesomeIcon>
+          <FontAwesomeIcon className='icons' icon ={faTwitter}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icons'icon ={faTelegram}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icons'icon ={faTiktok}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icons'icon ={faFacebook} ></FontAwesomeIcon>
+          <FontAwesomeIcon className='icons'icon ={faInstagram} ></FontAwesomeIcon>
+          <FontAwesomeIcon className='icons'icon ={faGithub}pull="right"></FontAwesomeIcon>
         
 
 

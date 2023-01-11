@@ -548,13 +548,24 @@ ul {
 }
 /* //stylying footer */
 .footer{
-  background-color: rgb(139, 129, 129);
-  height:135px;
+  background-color: rgb(24, 2, 2);
+  height:100px;
  
   text-align: center;
   justify-content: center;
 }
+/* .icons{
+  size: 10px;
+  
+  
+} */
+.list{
+  float: right;
+}
 
+.icons_container{
+  justify-content: space-between 20px;
+}
 
 /*STYLING CONTACT US PAGE */
 
