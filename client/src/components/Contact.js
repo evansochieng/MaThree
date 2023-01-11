@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Summary from './Form/Summary';
 
 function Contact() {
   return (
     <div>
-        <p>Our contacts will go here</p>
+      <p style={{ paddingTop: "200px" }}>Our contacts will go here</p>
+      <Summary />
     </div>
-  )
+  );
 }
 
 export default Contact
