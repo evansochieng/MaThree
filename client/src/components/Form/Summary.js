@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-function Summary() {
+function Summary({nextStep, prevStep}) {
 
   // add states for the order details
   const [name, setName] = useState("");
@@ -11,6 +11,16 @@ function Summary() {
   const [destination, setDestination] = useState("");
   const [returnTrip, setReturnTrip] = useState("");
   const [fare, setFare] = useState("");
+
+  const nextPage = e => {
+    e.preventDefault();
+    nextStep();
+  }
+
+  const previous = e => {
+    e.preventDefault();
+    prevStep();
+  }
 
   return (
     <div>
@@ -46,6 +56,7 @@ function Summary() {
         <br />
         <div style={{ marginTop: "10px" }}>
           <button
+          onClick={nextPage}
             style={{
               width: "80px",
               height: "10px",
@@ -57,6 +68,7 @@ function Summary() {
             Pay
           </button>
           <button
+          onClick={previous}
             style={{
               width: "80px",
               height: "10px",
