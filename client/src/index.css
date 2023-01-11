@@ -564,7 +564,8 @@ ul {
 }
 
 .icons_container{
-  justify-content: space-between 20px;
+  display: flex;
+   justify-content: space-between ; 
 }
 
 /*STYLING CONTACT US PAGE */
