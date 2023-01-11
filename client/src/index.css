@@ -5,14 +5,6 @@ body {
   background: #000;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 200px;
-}
-
 /* Styling for AUTH component */
 
 .auth-form-container,
@@ -283,23 +275,7 @@ ul {
   margin-top: 1.25rem;
 }
 
-
-
 /* End of styling Book component */
-
-/* Styling for Info component */
-.info-wrapper {
-  border: 1px solid white;
-  padding: 120px;
-}
-
-.info-btn {
-  display: flex;
-  justify-content: center;
-}
-
-
-/* End of styling */
 
 /* Styling for media adaptivity */
 
@@ -369,15 +345,14 @@ ul {
 
 
 /* Step Styling */
-.step-container {
+.step-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 3.5rem;
 }
-
-.step-layout {
+.step-layout{
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 1rem;
@@ -495,84 +470,137 @@ ul {
   border-radius: var(--border-radius);
   overflow: hidden;
 }
-
-.thead {
-
-
-  background: 'green';
-  color: 'white';
-
+.thead{
+  
+    
+    background: 'green';
+    color: 'white';
+    
 
 }
-
-.content-table {
+.content-table{
   border-collapse: collapse;
   margin: 25px 0;
-  font-size: 1.1em;
+  font-size:1.1em;
   min-width: 900px;
   border-radius: 10px 10px 0 0;
-  overflow: hidden;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  overflow:hidden;
+  box-shadow: 0 0 25px rgba(255, 255,255,0.25);
 }
-
-.content-table thead tr {
-  background-color: rgb(215, 221, 221);
+.content-table thead tr{
+ background-color: rgb(215, 221, 221);
   color: #000000;
-  text-align: center;
+  text-align :center;
   font-weight: bold;
 }
 
 
-.content-table tr {
-  padding: 12px 30px;
+.content-table tr{
+  padding:12px 30px;
 }
-
-.content-table tbody tr:last-of-type {
-
+.content-table tbody tr:last-of-type{
+    
   border-bottom: 3px solid wheat;
 }
-
+   
 .if-select {
   background: green;
   color: white;
   font-weight: 700;
   border: 1px solid green;
 }
-
 .unknown {
   color: white;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-
 .des-co {
   color: #000;
 }
-
 .des-co2 {
   color: gray;
 }
-
-.line-co {
+.line-co{
   background: green;
 }
-
 .line-co2 {
   background: gray;
 }
-
 .bck-click {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
 .context {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   padding: 2.5rem;
 }
-
-.info {
+.info{
   color: #000;
 }
+.contact-container{
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  font-size: 1em;
+
+}
+/* //stylying footer */
+.footer{
+  background-color: rgb(24, 2, 2);
+  height:100px;
+ 
+  text-align: center;
+  justify-content: center;
+}
+/* .icons{
+  size: 10px;
+  
+  
+} */
+.list{
+  float: right;
+}
+
+.icons_container{
+  display: flex;
+   justify-content: space-between ; 
+}
+
+/*STYLING CONTACT US PAGE */
+
+
+.--align-center {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Center Text */
+.--text-center {
+  text-align: center;
+}
+
+.--form-control input {
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 8px 1rem;
+  border: 1px solid #777;
+  border-radius: 3px;
+  outline: none;
+} 
+
+
+
+
+.message-here{
+  height: 150px;
+  width: 400px;
+}
+.btn--btn{
+  color: beige;
+  background-color: rgb(47, 0, 255);
+  position: relative;
+}
+

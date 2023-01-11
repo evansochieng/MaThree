@@ -3,7 +3,7 @@ import React from "react";
 const Logout = () => {
     return (
         <div>
-            <button>Logout</button>
+            <button style={{marginTop: "200px"}}>Logout</button>
         </div>
     )
 }

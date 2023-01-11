@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Logout from "./components/Logout";
 import Login from "./components/Login"
 import NavBar from './components/NavBar';
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -33,7 +34,9 @@ function App() {
         <Route exact path="/book" element={<Book />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/logout" element={<Logout />} />
+       
       </Routes>
+      <Footer/>
     </div>
   );
 }
