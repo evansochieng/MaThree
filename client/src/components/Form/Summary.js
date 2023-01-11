@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 
 
-function Summary() {
+function Summary({nextStep,prevStep}) {
 
   // add states for the order details
   const [name, setName] = useState("");
@@ -18,12 +18,24 @@ function Summary() {
   const [returnTrip, setReturnTrip] = useState("");
   const [fare, setFare] = useState("");
 
+  const nextPage = e => {
+    e.preventDefault();
+    nextStep();
+  }
+
+  const previous = e => {
+    e.preventDefault();
+    prevStep();
+  }
+
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
+        alignItems: "center",
+        paddingTop :"120px",
       }}
     >
       <h4>Trip Summary</h4>
@@ -112,6 +124,7 @@ function Summary() {
       </Card>
       <div style={{ marginTop: "10px" }}>
         <button
+        onClick={nextPage}
           style={{
             width: "80px",
             height: "10px",
@@ -125,6 +138,7 @@ function Summary() {
           Pay
         </button>
         <button
+        onClick={previous}
           style={{
             width: "80px",
             height: "10px",
