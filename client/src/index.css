@@ -549,7 +549,7 @@ ul {
 /* //stylying footer */
 .footer{
   background-color: rgb(24, 2, 2);
-  height:100px;
+  height:auto;
  
   text-align: center;
   justify-content: center;
