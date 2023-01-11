@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 
 
-function Summary() {
+function Summary({nextStep,prevStep}) {
 
   // add states for the order details
   const [name, setName] = useState("");
@@ -34,6 +34,8 @@ function Summary() {
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
+        alignItems: "center",
+        paddingTop :"120px",
       }}
     >
       <h4>Trip Summary</h4>
