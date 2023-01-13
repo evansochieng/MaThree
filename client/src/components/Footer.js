@@ -71,10 +71,10 @@ function Footer() {
 				<h3>Product</h3> 
                
 				<ul> 
-					<li><a href="">Pricing</a></li> 
-					<li><a href="">Features</a></li> 
-					<li><a href="">Documentation</a></li> 
-					<li><a href="">Developers</a></li> 
+					<li>Pricing</li> 
+					<li>Features</li> 
+					<li>Documentation</li> 
+					<li>Developers</li> 
                     <hr/>
 				</ul> 
 			</div> 
@@ -82,10 +82,10 @@ function Footer() {
 				<h3>MaThree</h3> 
                
 				<ul> 
-					<li><a href="">Mission</a></li> 
-					<li><a href="">History</a></li> 
-					<li><a href="">Staff</a></li> 
-					<li><a href="">Management</a></li> 
+					<li>Mission</li> 
+					<li>History</li> 
+					<li>Staff</li> 
+					<li>Management</li> 
 					{/* <li><a href="">Contact</a></li>  */}
                     <hr/>
 				</ul> 

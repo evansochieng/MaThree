@@ -5,6 +5,7 @@ import Added from "./Added";
 
 
 
+
 const Home = () => {
 
     const [routes, setRoutes] = useState([])
@@ -30,7 +31,7 @@ const Home = () => {
                     <img src={mathreeLogo} alt='mathree-logo' className="heroImage" />
                 </div>
             </div>
-            <hr />
+            <hr /> 
             <div>
                 <h1>Major Routes</h1>
                 <div>
@@ -40,10 +41,15 @@ const Home = () => {
 
 
                 </div>
+                <footer />
+              
             </div>
-
+           
+          
         </div>
+         
     )
+  
 }
 
 export default Home;
