@@ -59,7 +59,7 @@ function App() {
   if (isLoggedIn) {
     return (
       <div>
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route
             exact
@@ -70,7 +70,7 @@ function App() {
           <Route
             exact
             path="/login"
-            element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn}/>}
+            element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
           />
           <Route exact path="/about" element={<About />} />
           <Route
@@ -78,7 +78,11 @@ function App() {
             path="/book"
             element={<Book currentCommuter={commuter} />}
           />
-          <Route exact path="/contact" element={<Contact isLoggedIn={setIsLoggedIn}/>} />
+          <Route
+            exact
+            path="/contact"
+            element={<Contact isLoggedIn={setIsLoggedIn} />}
+          />
           <Route
             exact
             path="/logout"
