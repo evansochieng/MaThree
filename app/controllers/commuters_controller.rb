@@ -59,7 +59,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
 
     # Only allow a list of trusted parameters through.
     def commuter_params
-      params.permit(:name, :username, :id_number, :phone_number, :address, :password,:password_confirmation)
+      params.permit(:name, :username, :id_number, :phone_number, :password,:password_confirmation)
     end
 
     # Not Found Error

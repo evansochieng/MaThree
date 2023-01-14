@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GrCheckbox } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
-const Register = () => {
+const Register = ({ onAddUser }) => {
   const [formData, setFormData] = useState({
     name: "",
     username: "",
@@ -15,8 +15,35 @@ const Register = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-    
-    
+
+  function handleSubmit(e) {
+    e.preventDefault()
+
+    const newUser = {
+      ...formData
+    }
+
+    fetch('/commuters', {
+      method: "POST", headers: {
+        "ContentType": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(newUser),
+    }).then((res) => res.json()).then((data) => {
+      setFormData({
+        name: "",
+        username: "",
+        idNumber: "",
+        mobileNumber: "",
+        password: "",
+        cnfpassword: "",
+      });
+      onAddUser(data)
+    })
+
+  }
+
+
 
   return (
     <div className="auth-form-container">
@@ -78,7 +105,9 @@ const Register = () => {
             id="cnfpassword"
             placeholder="Confirm Password"
           />
-          <button type="submit">Sign Up</button>
+          <button
+          onClick={handleSubmit}
+           type="submit">Sign Up</button>
         </form>
 
         <div className="conditions">
