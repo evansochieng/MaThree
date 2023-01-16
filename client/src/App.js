@@ -58,7 +58,7 @@ function App() {
     setUsers(updateUsersArray)
   }
 
-<<<<<<< HEAD
+
   return (
     <div>
       <NavBar />
@@ -80,7 +80,7 @@ function App() {
     </div>
     
   );
-=======
+
   if (isLoggedIn) {
     return (
       <div>
@@ -124,7 +124,7 @@ function App() {
       </div>
     );
   }
->>>>>>> 22910cf3e77a376eced188acbf5d03ae3f5f56ba
+
 }
 
 export default App;
