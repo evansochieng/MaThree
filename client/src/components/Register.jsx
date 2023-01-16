@@ -62,6 +62,7 @@ const Register = ({ onAddUser }) => {
       onAddUser(data)
     })
 
+    navigate('/')
   }
 
 
