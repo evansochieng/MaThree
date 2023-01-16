@@ -13,18 +13,19 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ImSad } from "react-icons/im";
 
-function Logout() {
+function Logout({isLoggedIn}) {
   // Define navigate to assist go back to login on logout
   const navigate = useNavigate();
 
   //Log out user, redirect to login
   function logout() {
     navigate("/login");
+    isLoggedIn(false);
   }
 
   // Return user to home
   function redirectHome() {
-    navigate("/");
+    navigate("/home");
   }
 
   return (
