@@ -16,11 +16,17 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
 
   # GET /commuters/1
   def show
-    render json: @commuter
+    @commuter = Commuter.find_by(id: session[:user_id])
+    if @commuter
+      render json: @commuter
+    else
+      render json: {error: "Not authorized "}, status: :unauthorized
+    end
   end
 
   #Autologin / Stay logged in
   def autologin
+    # find the commuter who is currently logged in
      @commuter = Commuter.find_by(id: session[:user_id])
      if @commuter
       render json: @commuter, status: :ok
@@ -69,6 +75,6 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
 
     # Invalid Error
     def handle_invalid_response(e)
-      render json: {error: e.record.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: e.record.errors.full_messages}, status: :unprocessable_entity
     end
 end

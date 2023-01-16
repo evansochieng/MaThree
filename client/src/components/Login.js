@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Login() {
+function Login( {onLogin, isLoggedIn} ) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  // set state for error
+  const [error, setError] = useState([]);
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,7 +18,22 @@ function Login() {
         Accept: "application/json",
       },
       body: JSON.stringify({ username, password }),
-    });
+    })
+    //handle authentication errors
+    .then( res => {
+      if (res.ok) {
+        res.json().then( user => {
+          onLogin(user);
+          isLoggedIn(true);
+        });
+        alert("Login successful")
+        return navigate('/')
+      } else {
+        res.json().then( err => {
+          setError(err.error);
+        })
+      }
+    })
   }
 
   return (
@@ -38,6 +57,13 @@ function Login() {
           className="form-group form-control"
           required
         />
+        {/* render authentication error */}
+        {error.map( (err) => (
+          <h5 key={err} style={{color: 'red'}}>
+            {err}!
+          </h5>
+        ))}
+
         <button type="submit" className="login-btn">Login</button>
       </form>
       <div>

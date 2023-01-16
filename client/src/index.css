@@ -653,10 +653,10 @@ ul {
 						#modules{ padding: 4em; margin-bottom: -5em; } 
 							#modules > h2{ display: none; } 
 							
-								#modules > .module > h3{ margin-bottom: 0em; color: rgba(0,0,0,var(--bg-opacity)); font-size: 1em; font-weight: 600; text-transform: uppercase; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; } 
-								#modules > .module > p{ margin-bottom: 0.5em; color: #f2f0ed; line-height: 1.25; } 
-								#modules > .module > ul{ margin-bottom: 0.5em; } 
-									#modules > .module > ul > li{ color: #f2f0ed; line-height: 1.25; } 
+								#modules > .module > h3{ margin-bottom: 0em;  color: rgba(0,0,0,var(--bg-opacity)); font-size: 1em; font-weight: 600; text-transform: uppercase; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; } 
+								#modules > .module > p{ margin-bottom: 0.5em; color: #f2f0ed; line-height: 1.25; }  
+							 #modules > .module > ul{ margin-bottom: 0.5em; color: #57534b; } 
+									#modules > .module > ul > li{ color: rgba(0,0,0,var(--bg-opacity));; line-height: 1.25; } 
 										#modules > .module > ul > li > a{ color: #3f3425; line-height: 1.25; } 
 										#modules > .module > ul > li.mail > a:before{ content: "\f003"; margin: 0 0.5em 0 0; display: inline-block; color: #f9f8f7;  font-family: "FontAwesome";text-align: center; } 
 										#modules > .module > ul > li.phone > a:before{ content: "\f095"; margin: 0 0.5em 0 0; display: inline-block; color: #f9f8f7; font-family: "FontAwesome"; text-align: center; } 

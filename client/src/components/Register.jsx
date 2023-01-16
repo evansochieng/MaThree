@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { GrCheckbox } from "react-icons/gr";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Register = ({ onAddUser }) => {
 
+  //define navigation variable
   const navigate = useNavigate();
 
+  //define state for errors in signing up
+  const [error, setError] = useState([]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -33,7 +37,20 @@ const Register = ({ onAddUser }) => {
         "Accept": "application/json"
       },
       body: JSON.stringify(newUser),
-    }).then((res) => res.json()).then((data) => {
+    })
+    //handle errors
+    .then((res) => {
+      if (res.ok) {
+        res.json()
+        return navigate('/')
+      } else {
+        res.json().then( err => {
+          console.log(err.errors)
+          setError(err.errors)
+        })
+      }
+    })
+    .then((data) => {
       setFormData({
         name: "",
         username: "",
@@ -110,6 +127,14 @@ const Register = ({ onAddUser }) => {
             id="cnfpassword"
             placeholder="Confirm Password"
           />
+
+          {/* render error(s) */}
+          {error.map( (e) => (
+          <h5 key={e} style={{color: 'red'}}>
+            {e}!
+          </h5>
+        ))}
+        
           <button
           onClick={handleSubmit}
            type="submit">Sign Up</button>
