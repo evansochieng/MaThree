@@ -6,6 +6,9 @@ import Added from "./Added";
 
 
 
+
+
+
 const Home = () => {
 
     const [routes, setRoutes] = useState([])
@@ -32,7 +35,7 @@ const Home = () => {
                 </div>
             </div>
             <hr /> 
-            <div>
+            {/* <div>
                 <h1>Major Routes</h1>
                 <div>
                     {routes.map((route, id) => (
@@ -43,13 +46,17 @@ const Home = () => {
                 </div>
                 <footer />
               
-            </div>
+            </div> */}
            
-          
+         
+
+
         </div>
          
     )
   
 }
+
+  
 
 export default Home;
