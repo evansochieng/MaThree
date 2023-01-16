@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
     # add action for logging in commuter
     def create
-        user = Commuter.find_by(username: params[:username])
-        if user&.authenticate(params[:password])
-            session[:user_id] = user.id
-            render json: user
+        commuter = Commuter.find_by(username: params[:username])
+        if commuter&.authenticate(params[:password])
+            session[:user_id] = commuter.id
+            render json: commuter
         else
             render json: {error: ["Invalid Username or Password"] }, status: :unauthorized
         end
