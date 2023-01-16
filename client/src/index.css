@@ -129,14 +129,13 @@ button {
   height: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  position: fixed;
   background-image: linear-gradient(to bottom, #000000, #1a1a1a);
 }
 
 ul {
   list-style: none;
-  color: #ADACB5;
 }
+
 
 
 .nav-items {
@@ -276,6 +275,20 @@ ul {
 }
 
 /* End of styling Book component */
+
+/* Styling of Info component */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+}
+.info-wrapper {
+  border: 1px solid white;
+  padding: 50px;
+}
+/* End of styling */
 
 /* Styling for media adaptivity */
 
