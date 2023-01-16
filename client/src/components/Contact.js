@@ -26,10 +26,25 @@ office number 104 </p>
       <h2 className='--text-center'>CONTACT US</h2>
       <p>for any inquiries or suggestions  </p>
       <form className=' --form-control '>
-        <input type='text' placeholder='Full Name'
-        name=' user_name'/>
-        <input type='email' placeholder=' Email address'
-        name='user_email' required/>
+      <label for="email">Name Details
+      <span>*</span>
+      <span class="wpcf7-form-control-wrap" data-name="last-name"><input size="40"
+       class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" 
+       aria-required="true" aria-invalid="false" value="" type="text" name="last-name">
+        </input></span></label>
+
+        {/* <input type='text' placeholder='Full Name'
+        name=' user_name'/> */}
+        <br></br>
+  
+        <label for="email">Email Address
+        <span>*</span>
+        <span class="wpcf7-form-control-wrap" data-name="last-name"><input size="40"
+       class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" 
+       aria-required="true" aria-invalid="false" value="" type="text" name="last-name">
+        </input></span></label>
+        {/* <input type='email' placeholder=' Email address'
+        name='user_email' required/> */}
         </form>
         <form>
         <input className='message-here' type='text' placeholder='type message here'

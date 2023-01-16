@@ -10,6 +10,8 @@ import Login from "./components/Login"
 import NavBar from './components/NavBar';
 import Footer from "./components/Footer";
 
+
+
 function App() {
 
   const [users, setUsers] = useState([]);
@@ -61,6 +63,29 @@ function App() {
     const updateUsersArray = [...users,newUser];
     setUsers(updateUsersArray)
   }
+
+
+  return (
+    <div>
+      <NavBar />
+      <Routes>
+        <Route exact path="/signup" element={<Register onAddUser={addUser} />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/book" element={<Book />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/logout" element={<Logout />} />
+        
+
+      </Routes>
+      
+      
+      <Footer/>
+      
+    </div>
+    
+  );
 
   if (isLoggedIn) {
     return (
@@ -125,6 +150,7 @@ function App() {
       </div>
     );
   }
+
 }
 
 export default App;
