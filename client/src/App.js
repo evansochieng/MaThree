@@ -23,6 +23,12 @@ function App() {
   // define variable for navigation
   const navigate = useNavigate();
 
+  ////////////////
+  useEffect(() => {
+    navigate('/login')
+  }, [])
+  ////////////////
+
   //auto-login user
   useEffect(() => {
     fetch('/me')
@@ -59,9 +65,9 @@ function App() {
   if (isLoggedIn) {
     return (
       <div>
-        <NavBar/>
+        <NavBar />
         <Routes>
-          <Route
+          {/* <Route
             exact
             path="/signup"
             element={<Register onAddUser={addUser} />}
@@ -71,6 +77,12 @@ function App() {
             exact
             path="/login"
             element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
+          /> */}
+          {/* <Route exact path="/" element={<Register onAddUser={addUser} />} /> */}
+          <Route
+            exact
+            path="/home"
+            element={<Home currentCommuter={commuter} />}
           />
           <Route exact path="/about" element={<About />} />
           <Route
@@ -86,7 +98,9 @@ function App() {
           <Route
             exact
             path="/logout"
-            element={<Logout handleLogout={handleLogout} />}
+            element={
+              <Logout handleLogout={handleLogout} isLoggedIn={setIsLoggedIn} />
+            }
           />
         </Routes>
         <Footer />
@@ -95,7 +109,19 @@ function App() {
   } else {
     return (
       <div>
-        <Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />
+        {/* <Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} /> */}
+        <Routes>
+          <Route
+            exact
+            path="/signup"
+            element={<Register onAddUser={addUser} />}
+          />
+          <Route
+            exact
+            path="/login"
+            element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
+          />
+        </Routes>
       </div>
     );
   }
