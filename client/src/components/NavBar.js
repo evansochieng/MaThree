@@ -21,7 +21,7 @@ const NavBar = () => {
   const links = [
     {
       id: 1,
-      link: "/home",
+      link: "/",
       name: "home",
     },
     {
@@ -39,16 +39,16 @@ const NavBar = () => {
       link: "/contact",
       name: "contact",
     },
-    // {
-    //   id: 5,
-    //   link: "/signup",
-    //   name: "register",
-    // },
-    // {
-    //   id: 6,
-    //   link: "/login",
-    //   name: "login",
-    // },
+    {
+      id: 5,
+      link: "/signup",
+      name: "register",
+    },
+    {
+      id: 6,
+      link: "/login",
+      name: "login",
+    },
     {
       id: 7,
       link: "/logout",

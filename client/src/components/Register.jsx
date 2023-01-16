@@ -31,31 +31,18 @@ const Register = ({ onAddUser }) => {
       ...formData
     }
 
-    console.log(JSON.stringify(newUser));
-
     fetch('/commuters', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
+      method: "POST", headers: {
+        "ContentType": "application/json",
+        "Accept": "application/json"
       },
-      body: JSON.stringify({
-        name: newUser.name,
-        username: newUser.username,
-        id_number: newUser.idNumber,
-        phone_number: newUser.mobileNumber,
-        password: newUser.password,
-        password_confirmation: newUser.cnfpassword
-      }),
+      body: JSON.stringify(newUser),
     })
     //handle errors
     .then((res) => {
       if (res.ok) {
-        res.json().then((data) => {
-          onAddUser(data)
-        })
-        alert("Signup Successful!")
-        return navigate('/login')
+        res.json()
+        return navigate('/')
       } else {
         res.json().then( err => {
           console.log(err.errors)
@@ -63,7 +50,7 @@ const Register = ({ onAddUser }) => {
         })
       }
     })
-    // .then((data) => {
+    .then((data) => {
       setFormData({
         name: "",
         username: "",
@@ -72,10 +59,10 @@ const Register = ({ onAddUser }) => {
         password: "",
         cnfpassword: "",
       });
-    //   onAddUser(data)
-    // })
+      onAddUser(data)
+    })
 
-    //navigate('/login')
+    navigate('/')
   }
 
 
