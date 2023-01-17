@@ -10,6 +10,8 @@ import Login from "./components/Login"
 import NavBar from './components/NavBar';
 import Footer from "./components/Footer";
 
+
+
 function App() {
 
   const [users, setUsers] = useState([]);
@@ -22,12 +24,6 @@ function App() {
 
   // define variable for navigation
   const navigate = useNavigate();
-
-  ////////////////
-  useEffect(() => {
-    navigate('/login')
-  }, [])
-  ////////////////
 
   //auto-login user
   useEffect(() => {
@@ -62,12 +58,35 @@ function App() {
     setUsers(updateUsersArray)
   }
 
+
+  return (
+    <div>
+      <NavBar />
+      <Routes>
+        <Route exact path="/signup" element={<Register onAddUser={addUser} />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/book" element={<Book />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/logout" element={<Logout />} />
+        
+
+      </Routes>
+      
+      
+      <Footer/>
+      
+    </div>
+    
+  );
+
   if (isLoggedIn) {
     return (
       <div>
-        <NavBar />
+        <NavBar/>
         <Routes>
-          {/* <Route
+          <Route
             exact
             path="/signup"
             element={<Register onAddUser={addUser} />}
@@ -77,12 +96,6 @@ function App() {
             exact
             path="/login"
             element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
-          /> */}
-          {/* <Route exact path="/" element={<Register onAddUser={addUser} />} /> */}
-          <Route
-            exact
-            path="/home"
-            element={<Home currentCommuter={commuter} />}
           />
           <Route exact path="/about" element={<About />} />
           <Route
@@ -98,9 +111,7 @@ function App() {
           <Route
             exact
             path="/logout"
-            element={
-              <Logout handleLogout={handleLogout} isLoggedIn={setIsLoggedIn} />
-            }
+            element={<Logout handleLogout={handleLogout} />}
           />
         </Routes>
         <Footer />
@@ -109,22 +120,11 @@ function App() {
   } else {
     return (
       <div>
-        {/* <Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} /> */}
-        <Routes>
-          <Route
-            exact
-            path="/signup"
-            element={<Register onAddUser={addUser} />}
-          />
-          <Route
-            exact
-            path="/login"
-            element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
-          />
-        </Routes>
+        <Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />
       </div>
     );
   }
+
 }
 
 export default App;

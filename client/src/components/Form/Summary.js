@@ -42,7 +42,7 @@ function Summary({nextStep,prevStep}) {
       <Card
         style={{
           width: 400,
-          backgroundColor: "#fff",
+          backgroundColor: "#000000",
         }}
       >
         <CardContent>

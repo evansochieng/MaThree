@@ -9,7 +9,8 @@ body {
 
 .auth-form-container,
 .login-form,
-.register-form {
+.register-form 
+.contact-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -488,9 +489,9 @@ ul {
     
     background: 'green';
     color: 'white';
-    
+}  
 
-}
+
 .content-table{
   border-collapse: collapse;
   margin: 25px 0;
@@ -500,6 +501,7 @@ ul {
   overflow:hidden;
   box-shadow: 0 0 25px rgba(255, 255,255,0.25);
 }
+
 .content-table thead tr{
  background-color: rgb(215, 221, 221);
   color: #000000;
@@ -553,7 +555,9 @@ ul {
   color: #000;
 }
 .contact-container{
-  background-color: black;
+  background-color: rgb(112, 104, 104);
+  display: flex;
+  /* flex-direction: column; */
   text-align: center;
   justify-content: center;
   font-size: 1em;
@@ -562,7 +566,7 @@ ul {
 /* //stylying footer */
 .footer{
   background-color: rgb(24, 2, 2);
-  height: 160px;
+  height: auto ;
  
   text-align: center;
   justify-content: center;
@@ -596,26 +600,60 @@ ul {
 }
 
 .--form-control input {
-  font-size: 1.6rem;
-  font-weight: 300;
-  padding: 8px 1rem;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 5px 1rem;
   border: 1px solid #777;
-  border-radius: 3px;
-  outline: none;
+  border-radius: 10px;
+  /* outline: none; */
+  width: 250px;
+  margin-bottom: 150;
+  /* background-color: transparent; */
+  
 } 
 
+.--form-control input {
+  
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 8px 1rem;
+  border: 1px solid rgb(209, 52, 52);
+  border-radius: 12px;
+  outline: none;
+  
+} 
+.container{
+  height:230px;
+  width:200px;
+}
 
 
 
 .message-here{
   height: 150px;
   width: 400px;
+  height: 100px;
+  font-size: large;
+  background-color: rgb(238, 231, 231);
 }
 .btn--btn{
   color: beige;
-  background-color: rgb(47, 0, 255);
+  background-color: rgb(54, 51, 63);
   position: relative;
+  width: 150px;
+  align-self: hover;
+  font-size: medium;
+
+
 }
+/* .container{
+  background-color: #f19a0c;
+  width: min-content;
+  size-adjust: 100px;
+  align-self: inherit;
+  margin-left: 100px;
+} */
+
 
 /* .module { margin-bottom: 2em;
    color: white;
@@ -628,7 +666,7 @@ ul {
       html, body, #body *, #footer *{ margin: 0; padding: 0; display: block; color: #3d3d3d; font-family: "Open Sans", sans-serif; font-size: inherit; font-weight: normal; text-decoration: none; line-height: 1; outline: 0; } 
 
 /* FontAwesome */ 
-	@font-face{ font-family: "FontAwesome"; src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0"); src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; } 
+	/* @font-face{ font-family: "FontAwesome"; src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0"); src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }  */
 
 /* Queries */ 
 	/* Min */ 
@@ -718,4 +756,19 @@ ul {
 		html{ font-size: 186.7%; } 
 		 
 	} 
+  .card{
+    height:200px;
+    background-color: #0a0a0ae1;
+    display:flex;
+    text-align:center;
+    margin-left: 300px;
+    width:750px;
+    border-radius: 100px;
+    border-bottom: #272222;
+    
+
+  }
+
+
+
 

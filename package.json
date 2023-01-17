@@ -19,6 +19,7 @@
     "bootstrap": "^5.2.3",
     "react-bootstrap": "^2.7.0",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^6.4.5"
+    "react-router-dom": "^6.4.5",
+    "styled-components": "^5.3.6"
   }
 }
