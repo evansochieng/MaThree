@@ -625,6 +625,7 @@ ul {
   width: 150px;
   align-self: hover;
   font-size: medium;
+ 
 
 
 }
@@ -738,6 +739,11 @@ ul {
 		html{ font-size: 186.7%; } 
 		 
 	} 
+
+  .maincard{
+    height: 700px;
+    background-color: #000000;
+  }
 
 
 
