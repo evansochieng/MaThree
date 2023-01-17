@@ -39,11 +39,18 @@ const Home = ( {currentCommuter} ) => {
         <hr />
         <div>
           {console.log(currentCommuter)}
-          <h1>Major Routes</h1>
-          <div>
+          <h1>Routes</h1>
+
+            
+          <div className="my-card-routes">
             {routes.map((route, id) => (
+               
               <Added {...route} key={id} />
             ))}
+          </div>
+          <div>
+
+           
           </div>
         </div>
       </div>

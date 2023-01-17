@@ -489,9 +489,9 @@ ul {
     
     background: 'green';
     color: 'white';
-    
+}  
 
-}
+
 .content-table{
   border-collapse: collapse;
   margin: 25px 0;
@@ -501,6 +501,7 @@ ul {
   overflow:hidden;
   box-shadow: 0 0 25px rgba(255, 255,255,0.25);
 }
+
 .content-table thead tr{
  background-color: rgb(215, 221, 221);
   color: #000000;
@@ -755,6 +756,17 @@ ul {
 		html{ font-size: 186.7%; } 
 		 
 	} 
+  .card{
+    height:200px;
+    background-color: #0a0a0ae1;
+    display:flex;
+    text-align:center;
+    margin-left: 300px;
+    width:750px;
+    border-radius: 20px;
+    border-bottom: #c01818;
+
+  }
 
 
 
