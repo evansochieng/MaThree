@@ -59,9 +59,9 @@ body = {
     "Timestamp"=> time,
     "TransactionType"=> "CustomerPayBillOnline",
     "Amount"=> 1,
-    "PartyA"=> 254794329992,
+    "PartyA"=> 254704999704,
     "PartyB"=> 174379,
-    "PhoneNumber": 254794329992,
+    "PhoneNumber": 254704999704,
     "CallBackURL"=> "https://mydomain.com/path",
     "AccountReference"=> "CompanyLtdX",
     "TransactionDesc"=> "Payment of X" 

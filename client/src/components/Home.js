@@ -39,12 +39,12 @@ const Home = ( {currentCommuter} ) => {
         <hr />
         <div>
           {console.log(currentCommuter)}
-          <h1>Major Routes</h1>
+          {/* <h1>Major Routes</h1>
           <div>
             {routes.map((route, id) => (
               <Added {...route} key={id} />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     );
