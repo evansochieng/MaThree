@@ -27,7 +27,7 @@ function Login( {onLogin, isLoggedIn} ) {
           isLoggedIn(true);
         });
         alert("Login successful")
-        return navigate('/')
+        return navigate('/home')
       } else {
         res.json().then( err => {
           setError(err.error);

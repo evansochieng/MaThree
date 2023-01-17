@@ -615,13 +615,17 @@ ul {
 }
 
 .--form-control input {
-  font-size: 1.6rem;
-  font-weight: 300;
-  padding: 8px 1rem;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 5px 1rem;
   border: 1px solid #777;
-  border-radius: 3px;
-  outline: none;
-}
+  border-radius: 10px;
+  /* outline: none; */
+  width: 250px;
+  margin-bottom: 150;
+  /* background-color: transparent; */
+  
+} 
 
 
 
@@ -629,13 +633,30 @@ ul {
 .message-here {
   height: 150px;
   width: 400px;
+  height: 100px;
+  font-size: large;
+  background-color: rgb(238, 231, 231);
 }
 
 .btn--btn {
   color: beige;
-  background-color: rgb(47, 0, 255);
+  background-color: rgb(54, 51, 63);
   position: relative;
+  width: 150px;
+  align-self: hover;
+  font-size: medium;
+ 
+
+
 }
+/* .container{
+  background-color: #f19a0c;
+  width: min-content;
+  size-adjust: 100px;
+  align-self: inherit;
+  margin-left: 100px;
+} */
+
 
 /* .module { margin-bottom: 2em;
    color: white;
@@ -695,201 +716,8 @@ body,
 								#cta > form > input[type=submit]{ position: absolute; top: 0; right: 0; bottom: 0; padding: 1em; height: 4em; color: #fff; font-weight: 600; background: #fe9909; border: 0; cursor: pointer; } 
 								#cta > form > input[type=submit]:hover{ background: #fdca40; }  */
 
-  #resources>h2 {
-    display: none;
+  .maincard{
+    height: 700px;
+    background-color: #000000;
   }
-
-  #modules {
-    padding: 4em;
-    margin-bottom: -5em;
-  }
-
-  #modules>h2 {
-    display: none;
-  }
-
-  #modules>.module>h3 {
-    margin-bottom: 0em;
-    color: rgba(0, 0, 0, var(--bg-opacity));
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-
-  #modules>.module>p {
-    margin-bottom: 0.5em;
-    color: #f2f0ed;
-    line-height: 1.25;
-  }
-
-  #modules>.module>ul {
-    margin-bottom: 0.5em;
-    color: #57534b;
-  }
-
-  #modules>.module>ul>li {
-    color: rgba(0, 0, 0, var(--bg-opacity));
-    ;
-    line-height: 1.25;
-  }
-
-  #modules>.module>ul>li>a {
-    color: #3f3425;
-    line-height: 1.25;
-  }
-
-  #modules>.module>ul>li.mail>a:before {
-    content: "\f003";
-    margin: 0 0.5em 0 0;
-    display: inline-block;
-    color: #f9f8f7;
-    font-family: "FontAwesome";
-    text-align: center;
-  }
-
-  #modules>.module>ul>li.phone>a:before {
-    content: "\f095";
-    margin: 0 0.5em 0 0;
-    display: inline-block;
-    color: #f9f8f7;
-    font-family: "FontAwesome";
-    text-align: center;
-  }
-
-  #modules>.module>ul>li.facebook>a:before {
-    content: "\f09a";
-    margin: 0 0.5em 0 0;
-    display: inline-block;
-    color: #f9f8f7;
-    font-family: "FontAwesome";
-    text-align: center;
-  }
-
-  #modules>.module>ul>li.twitter>a:before {
-    content: "\f099";
-    margin: 0 0.5em 0 0;
-    display: inline-block;
-    color: #f9f8f7;
-    font-family: "FontAwesome";
-    text-align: center;
-  }
-
-  #modules>.module>ul>li>a:hover {
-    color: #fdca40;
-  }
-
-  #legal {
-    padding: 2em 4em;
-    background: black;
-  }
-
-  #legal>p {
-    font-size: 0.75em;
-    text-align: center;
-  }
-
-  #legal>p>a {
-    display: inline;
-    color: #f19a0c;
-    line-height: 1.25;
-    text-decoration: underline;
-  }
-
-  #legal>p>a:hover {
-    color: #e6e2d7;
-  }
-}
-
-/* Bricks */
-@media (min-width: 200px) {
-  html {
-    font-size: 4vw;
-  }
-
-  /* #f1eeea; */
-
-}
-
-/* Smartphones */
-@media (min-width: 300px) {}
-
-/* Retina */
-@media (min-width: 479px) {
-  html {
-    font-size: 120%;
-  }
-
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-
-  #modules {
-    overflow: hidden;
-  }
-
-  #modules>.module {
-    float: left;
-    width: 50%;
-  }
-
-  #modules>.module>h3 {
-    text-align: left;
-  }
-
-  #modules>.module:nth-child(odd)>h3 {
-    text-align: right;
-  }
-
-  #modules>.module:nth-child(odd)>p {
-    text-align: right;
-  }
-
-  #modules>.module:nth-child(odd)>ul>li {
-    text-align: right;
-  }
-
-}
-
-/* Desktop */
-@media (min-width: 979px) {
-
-  #modules>.module {
-    width: 25%;
-  }
-
-  #modules>.module>h3 {
-    text-align: left;
-  }
-
-  #modules>.module:nth-child(odd)>h3 {
-    text-align: left;
-  }
-
-  #modules>.module:nth-child(odd)>p {
-    text-align: left;
-  }
-
-  #modules>.module:nth-child(odd)>ul>li {
-    text-align: left;
-  }
-
-}
-
-/* Widescreen */
-@media (min-width: 1800px) {
-  html {
-    font-size: 1.067vw;
-  }
-
-}
-
-/* Max */
-@media (min-width: 2800px) {
-  html {
-    font-size: 186.7%;
-  }
-
 }
