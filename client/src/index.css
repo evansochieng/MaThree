@@ -22,7 +22,7 @@ label {
 }
 
 .app-title {
-  font-family: "Great Vibes", cursive;
+  /* font-family: "Great Vibes", cursive; */
   font-size: 3.5rem;
   margin-top: 6rem;
 }
@@ -702,10 +702,10 @@ body,
   /* #page{ padding: 4em; background: #fff; } 
 						#page > h2{ color: #444; font-size: 1.25em; font-weight: 600; text-transform: uppercase; } 
 						#page > p{ margin-top: 2em; line-height: 1.25; } */
-  #footer {
+  /* #footer {
     background: black;
     height: 40%;
-  }
+  } */
 
   /* #cta{ padding: 4em; background: #350f55; } 
 						#cta > h2{ color: #fff; font-size: 2em; font-weight: 600; text-transform: uppercase; text-align: center; } 
@@ -721,3 +721,8 @@ body,
     background-color: #000000;
   }
 }
+
+h1,h2,h3,.home-title,.mission,.vision {
+  color: #2f2e2e;
+}
+

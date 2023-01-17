@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function Info({ values, handleChange, nextStep, prevStep, setFare }) {
+function Info({ values, handleChange, nextStep, setFare }) {
   // define state for routes
   const [routes, setRoutes] = useState([])
   const nextPage = e => {
@@ -10,13 +10,9 @@ function Info({ values, handleChange, nextStep, prevStep, setFare }) {
     // Set the fare here
     const curRoute = routes.filter((route) => route.name == values.route);
     setFare(curRoute[0].fare);
-    //////////
+    //////////prevStep
   }
 
-  const previous = e => {
-    e.preventDefault();
-    prevStep();
-  }
 
   // make a fetch request for routes
   useEffect(() => {
