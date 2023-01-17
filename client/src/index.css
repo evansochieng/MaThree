@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 body {
-  color: #001413;
+  color: #808085;
   background: #ebebeb;
 }
 
@@ -43,11 +43,11 @@ input {
 
 button {
   border: none;
-  background-color: white;
+  background-color: #7b5bf2;
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  color: #000;
+  color: #ebebeb;
 }
 
 * {
@@ -130,7 +130,7 @@ button {
   padding-left: 1rem;
   padding-right: 1rem;
   /* background-image: linear-gradient(to bottom, #000000, #1a1a1a); */
-  background-color: #5465FF;
+  background-color: #09184d;
 }
 
 ul {
