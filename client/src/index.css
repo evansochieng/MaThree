@@ -596,12 +596,16 @@ ul {
 }
 
 .--form-control input {
-  font-size: 1.6rem;
-  font-weight: 300;
-  padding: 8px 1rem;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 5px 1rem;
   border: 1px solid #777;
-  border-radius: 3px;
-  outline: none;
+  border-radius: 10px;
+  /* outline: none; */
+  width: 250px;
+  margin-bottom: 150;
+  /* background-color: transparent; */
+  
 } 
 
 
@@ -610,12 +614,28 @@ ul {
 .message-here{
   height: 150px;
   width: 400px;
+  height: 100px;
+  font-size: large;
+  background-color: rgb(238, 231, 231);
 }
 .btn--btn{
   color: beige;
-  background-color: rgb(47, 0, 255);
+  background-color: rgb(54, 51, 63);
   position: relative;
+  width: 150px;
+  align-self: hover;
+  font-size: medium;
+
+
 }
+/* .container{
+  background-color: #f19a0c;
+  width: min-content;
+  size-adjust: 100px;
+  align-self: inherit;
+  margin-left: 100px;
+} */
+
 
 /* .module { margin-bottom: 2em;
    color: white;
@@ -718,4 +738,7 @@ ul {
 		html{ font-size: 186.7%; } 
 		 
 	} 
+
+
+
 
