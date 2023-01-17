@@ -11,7 +11,12 @@ function Added({name, from,to ,description, fare}) {
     
     
     <div className="card">
-     
+      <Card  style={{
+          width: 1000,
+          color:"#fff",
+          backgroundColor: "#060606",
+        }}>
+     <CardContent>
       <div className="card_body">
       
         <h2 className="card_title">{name}</h2>
@@ -21,6 +26,8 @@ function Added({name, from,to ,description, fare}) {
 
        
       </div>
+      </CardContent>
+      </Card>
       
 
 
