@@ -9,9 +9,6 @@ function Login( {onLogin, isLoggedIn} ) {
   const [error, setError] = useState([]);
   const navigate = useNavigate();
 
-  //console error
-  console.log(error);
-
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/login", {

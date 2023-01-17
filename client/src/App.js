@@ -67,6 +67,7 @@ function App() {
       <div>
         <NavBar />
         <Routes>
+
           {/* <Route
             exact
             path="/signup"
@@ -90,6 +91,9 @@ function App() {
             path="/book"
             element={<Book currentCommuter={commuter} />}
           />
+
+           
+        
           <Route
             exact
             path="/contact"
@@ -122,8 +126,11 @@ function App() {
             element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
+      
       </div>
+        
     );
+   
   }
 }
 

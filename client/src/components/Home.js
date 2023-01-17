@@ -2,8 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react"
 import mathreeLogo from "../mathreelogo.png";
 import Added from "./Added";
-
-
+import Cards from "./Cards";
 
 const Home = ( {currentCommuter} ) => {
 
@@ -32,20 +31,38 @@ const Home = ( {currentCommuter} ) => {
               print a hard copy of the receipt for proof of payment.
             </p>
           </div>
+        
           <div>
             <img src={mathreeLogo} alt="mathree-logo" className="heroImage" />
           </div>
         </div>
+      
         <hr />
+       
         <div>
           {console.log(currentCommuter)}
-          <h1>Major Routes</h1>
-          <div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          
+        
+        </div>
+        <div>
             {routes.map((route, id) => (
-              <Added {...route} key={id} />
+              <Cards {...route} key={id} />
             ))}
           </div>
-        </div>
       </div>
     );
 }
