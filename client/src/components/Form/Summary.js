@@ -87,7 +87,7 @@ function Summary({values, nextStep,prevStep}) {
           <br />
           <div
             style={{
-              backgroundColor: "#ee7a11",
+              backgroundColor: "#7b5bf2",
               height: "50px",
               paddingTop: "15px",
               fontWeight: "bolder",
@@ -137,11 +137,11 @@ function Summary({values, nextStep,prevStep}) {
           onClick={nextPage}
           style={{
             width: "80px",
-            height: "10px",
+            // height: "10px",
             marginRight: "200px",
             textAlign: "center",
             fontWeight: "bold",
-            backgroundColor: "#ee7a11",
+            backgroundColor: "#7b5bf2",
             marginLeft: "15px",
           }}
         >
@@ -151,10 +151,10 @@ function Summary({values, nextStep,prevStep}) {
           onClick={previous}
           style={{
             width: "80px",
-            height: "10px",
+            // height: "10px",
             textAlign: "center",
             fontWeight: "bold",
-            backgroundColor: "#ee7a11",
+            backgroundColor: "#7b5bf2",
             marginRight: "10px",
           }}
         >
