@@ -18,12 +18,33 @@ function Summary({values, nextStep,prevStep}) {
   // const [returnTrip, setReturnTrip] = useState("");
   // const [fare, setFare] = useState("");
 
+  // function to make post request to intiate payment
+  const initiatePayment = () => {
+    fetch('/payment', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        fare: values.fare,
+        phone_number: values.mobileNumber
+      })
+    })
+    // .then( (res) => console.log(res))
+    .then( (res) => res.json())
+    .then( (message) => console.log(message))
+  };
+
   const nextPage = e => {
     e.preventDefault();
     nextStep();
-    //////
-    console.log(values)
-    //////
+
+    //console log fare
+    console.log(values.fare)
+
+    //call function to make payment
+    initiatePayment();
   }
 
   const previous = e => {

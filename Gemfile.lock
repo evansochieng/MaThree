@@ -77,9 +77,13 @@ GEM
     date (3.3.3)
     diff-lcs (1.5.0)
     erubi (1.12.0)
+    excon (0.97.1)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.2)
@@ -99,6 +103,7 @@ GEM
     mini_mime (1.1.2)
     minitest (5.17.0)
     msgpack (1.6.0)
+    multi_xml (0.6.0)
     net-imap (0.3.4)
       date
       net-protocol
@@ -116,6 +121,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.5)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (6.1.7)
@@ -186,7 +193,6 @@ GEM
     zeitwerk (2.6.6)
 
 PLATFORMS
-  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -194,9 +200,12 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   byebug
+  excon (~> 0.97.1)
+  httparty (~> 0.21.0)
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 6.1.3, >= 6.1.3.2)
   rspec-json_expectations
   rspec-rails (~> 5.0.0)
