@@ -11,6 +11,9 @@ import Login from "./components/Login"
 import NavBar from './components/NavBar';
 import AdminLogin from "./adminComponents/AdminLogin";
 import AdminSignUp from "./adminComponents/AdminSignUp";
+import AdminLanding from "./adminComponents/AdminLanding";
+import Commuter from "./adminComponents/Commuter";
+import Driver from "./adminComponents/Driver";
 
 export const UserContext = createContext();
 
@@ -100,7 +103,7 @@ function App() {
             path="/home"
             element={<Home currentCommuter={commuter} />}
           />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/about" element={<Driver />} />
           <Route
             exact
             path="/book"
