@@ -1,4 +1,4 @@
-class AdminController < ApplicationController
+class AdminsController < ApplicationController
     before_action :set_admin, only: [:show, :update, :destroy]
 
   # handle errors
@@ -20,7 +20,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found_response
     if @admin
       render json: @admin
     else
-      render json: {error: "Not authorized "}, status: :unauthorized
+      render json: {error: "Not authorized"}, status: :unauthorized
     end
   end
 

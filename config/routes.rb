@@ -22,7 +22,9 @@ Rails.application.routes.draw do
   get "/rides/:name", to: "orders#myorders"
 
   # add routes for admin authentication
-  #post "/adminLogin"
+  post "/adminlogin", to: "sessions#createadmin"
+  get "/me", to: "admins#autologin"
+  #delete "/logout", to: "sessions#destroy"
   
 
   # # generate a route to use as our websocket server endpoint

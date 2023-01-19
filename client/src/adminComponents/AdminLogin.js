@@ -12,7 +12,7 @@ const AdminLogin = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("/admin", {
+        fetch("/adminlogin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -24,7 +24,7 @@ const AdminLogin = () => {
             .then(res => {
                 if (res.ok) {
                     res.json().then(user => {
-
+                        console.log(user)
                     });
                     alert("Login successful")
                     return navigate('/admin')
