@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
+import { createContext } from "react";
 import Home from "./components/Home";
 import Register from "./components/Register";
 import About from "./components/About";
@@ -8,9 +9,14 @@ import Contact from "./components/Contact";
 import Logout from "./components/Logout";
 import Login from "./components/Login"
 import NavBar from './components/NavBar';
-import Footer from "./components/Footer";
+import AdminLogin from "./adminComponents/AdminLogin";
+import AdminSignUp from "./adminComponents/AdminSignUp";
+
+export const UserContext = createContext();
 
 function App() {
+
+  const [admin, setAdmin] = useState([]);
 
   const [users, setUsers] = useState([]);
 
@@ -32,11 +38,11 @@ function App() {
   //auto-login user
   useEffect(() => {
     fetch('/me')
-    .then(res => {
-      if (res.ok){
-        res.json().then(user => setCommuter(user));
-      }
-    });
+      .then(res => {
+        if (res.ok) {
+          res.json().then(user => setCommuter(user));
+        }
+      });
   }, []);
 
   // logout user
@@ -44,26 +50,35 @@ function App() {
     fetch('/logout', {
       method: 'DELETE'
     })
-    .then(res => {
-      if (res.ok) {
-        setCommuter(null);
-        setIsLoggedIn(false)
-        return <Route path='/' element={<Login />}/>;
-      }
-    })
+      .then(res => {
+        if (res.ok) {
+          setCommuter(null);
+          setIsLoggedIn(false)
+          return <Route path='/' element={<Login />} />;
+        }
+      })
   };
 
   useEffect(() => {
     fetch("/commuters").then((r) => r.json()).then(setUsers);
   }, []);
+  useEffect(() =>{
+    fetch("/admin").then((res) =>res.json()).then(setAdmin);
+  })
 
-  function addUser (newUser) {
-    const updateUsersArray = [...users,newUser];
+  function addUser(newUser) {
+    const updateUsersArray = [...users, newUser];
     setUsers(updateUsersArray)
+  }
+
+  function addAdmin(newAdmin) {
+    const updateAdmin = [...admin, newAdmin];
+    setAdmin(updateAdmin)
   }
 
   if (isLoggedIn) {
     return (
+
       <div>
         <NavBar />
         <Routes>
@@ -92,8 +107,8 @@ function App() {
             element={<Book currentCommuter={commuter} />}
           />
 
-           
-        
+
+
           <Route
             exact
             path="/contact"
@@ -107,7 +122,6 @@ function App() {
             }
           />
         </Routes>
-        <Footer />
       </div>
     );
   } else {
@@ -125,12 +139,21 @@ function App() {
             path="/login"
             element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
           />
+          <Route
+            path="/adminLogin"
+            element={<AdminLogin />} />
+
+            <Route
+            path="/adminSignup"
+            element={<AdminSignUp onAddAdmin={addAdmin} />}
+             />
+
         </Routes>
-      
+
       </div>
-        
+
     );
-   
+
   }
 }
 
