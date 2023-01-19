@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :drivers
   resources :commuters
   resources :orders
+  resources :admins
 
   # add routes for authentication
   post "/login", to: "sessions#create"

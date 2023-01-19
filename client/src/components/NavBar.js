@@ -36,6 +36,11 @@ const NavBar = () => {
     },
     {
       id: 4,
+      link: "/orders",
+      name: "orders"
+    },
+    {
+      id: 5,
       link: "/contact",
       name: "contact",
     },
@@ -50,7 +55,7 @@ const NavBar = () => {
     //   name: "login",
     // },
     {
-      id: 7,
+      id: 6,
       link: "/logout",
       name: "logout",
     },

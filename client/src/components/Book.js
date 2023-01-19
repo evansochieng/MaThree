@@ -8,6 +8,9 @@ import Success from "./Form/Success";
 
 
 export class Book extends Component {
+
+  user = this.props
+
   state = {
     step: 1,
     fullName: "",
@@ -79,6 +82,7 @@ export class Book extends Component {
             handleChange={this.handleChange}
             setFare={this.setFare}
             values={values}
+            user={this.user}
           />
         );
       case 2:
@@ -90,7 +94,7 @@ export class Book extends Component {
           />
         );
       case 3:
-        return <Payment nextStep={this.nextStep} prevStep={this.prevStep} />;
+        return <Payment nextStep={this.nextStep} prevStep={this.prevStep} values={values} />;
       case 4:
         return <Success nextStep={this.nextStep} />;
 

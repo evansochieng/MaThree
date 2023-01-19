@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function Info({ values, handleChange, nextStep, setFare }) {
+function Info({ values, handleChange, nextStep, setFare, user }) {
   // define state for routes
   const [routes, setRoutes] = useState([])
   const nextPage = e => {
@@ -10,6 +10,9 @@ function Info({ values, handleChange, nextStep, setFare }) {
     // Set the fare here
     const curRoute = routes.filter((route) => route.name === values.route);
     setFare(curRoute[0].fare);
+
+    // Try grabbing current user
+    console.log(user.currentCommuter.name)
     //////////prevStep
   }
 

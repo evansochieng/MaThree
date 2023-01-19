@@ -11,6 +11,7 @@ import Login from "./components/Login"
 import NavBar from './components/NavBar';
 import AdminLogin from "./adminComponents/AdminLogin";
 import AdminSignUp from "./adminComponents/AdminSignUp";
+import Orders from "./components/Orders";
 
 export const UserContext = createContext();
 
@@ -78,11 +79,9 @@ function App() {
 
   if (isLoggedIn) {
     return (
-
       <div>
         <NavBar />
         <Routes>
-
           {/* <Route
             exact
             path="/signup"
@@ -106,8 +105,11 @@ function App() {
             path="/book"
             element={<Book currentCommuter={commuter} />}
           />
-
-
+          <Route
+            exact
+            path="/orders"
+            element={<Orders />}
+          />
 
           <Route
             exact

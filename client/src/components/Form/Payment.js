@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BsCheckCircle } from 'react-icons/bs';
 
-function Payment({ nextStep }) {
+function Payment({ nextStep, values }) {
   // set state for changing display message
     const [show, setShow] = useState(false);
     useEffect(() => {
@@ -13,7 +13,30 @@ function Payment({ nextStep }) {
     const nextPage = (e) => {
       e.preventDefault();
       nextStep();
+      postOrder();
     };
+
+    //create function to post order to the database
+    const postOrder = () => {
+      fetch("/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: values.fullName,
+          phone_number: values.mobileNumber,
+          route: values.route,
+          pickup_station: values.pickLocation,
+          destination: values.dropLocation,
+          fare: values.fare,
+          return_trip: values.returnTrip
+        }),
+      })
+      .then( res => res.json())
+      .then( data => console.log(data));
+    }
 
     return show ? (
       <div
