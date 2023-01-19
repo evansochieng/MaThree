@@ -18,6 +18,13 @@ Rails.application.routes.draw do
   post "/payment", to: "mpesa#initiate_payment"
   get "/payment", to: "mpesa#payment_response"
 
+  # add route for finding order for logged in user
+  get "/rides/:name", to: "orders#myorders"
+
+  # add routes for admin authentication
+  #post "/adminLogin"
+  
+
   # # generate a route to use as our websocket server endpoint
   # mount ActionCable.server => '/cable'
 

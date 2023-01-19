@@ -27,15 +27,16 @@ function Payment({ nextStep, values }) {
         body: JSON.stringify({
           name: values.fullName,
           phone_number: values.mobileNumber,
+          date: values.date,
           route: values.route,
           pickup_station: values.pickLocation,
           destination: values.dropLocation,
           fare: values.fare,
-          return_trip: values.returnTrip
+          return_trip: values.returnTrip ? values.returnTrip : "off",
         }),
       })
-      .then( res => res.json())
-      .then( data => console.log(data));
+        .then((res) => res.json())
+        .then((data) => console.log(data));
     }
 
     return show ? (

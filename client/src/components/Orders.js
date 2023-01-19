@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-const Orders = () => {
+const Orders = ({ currentCommuter }) => {
 
     //set state to store customer orders
     const [orders, setOrders] = useState([])
 
     // fetch orders
     useEffect(() => {
-      fetch("/orders")
+      fetch(`/rides/${currentCommuter.name}`)
         .then((res) => res.json())
         .then((orderArr) => {
           setOrders(orderArr);
@@ -27,13 +27,19 @@ const Orders = () => {
               {order.name}
             </h4>
             <h5 className="card-title" id="title">
-              Route : {order.route}
+              Date : {order.date}
             </h5>
+            {/* <h5 className="card-title" id="title">
+              Route : {order.route}
+            </h5> */}
             <h5 className="card-title" id="tile">
               Pickup station: {order.pickup_station}
             </h5>
             <h5 className="card-title" id="tile">
               Destination: {order.destination}
+            </h5>
+            <h5 className="card-title" id="tile">
+              Return Trip: {order.return_trip}
             </h5>
             <h5 className="card-title" id="tile">
               Fare: {order.fare}
@@ -44,8 +50,8 @@ const Orders = () => {
     ));
 
   return (
-    <div style={{ marginTop: "120px" }}>
-      <div>Below are your previous orders</div>
+    <div style={{ marginTop: "120px", display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{fontWeight: 'bold', marginBottom: '40px'}}>My Rides</div>
       <div className="row">{myorders}</div>
     </div>
   );

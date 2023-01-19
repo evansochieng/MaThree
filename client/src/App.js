@@ -108,7 +108,7 @@ function App() {
           <Route
             exact
             path="/orders"
-            element={<Orders />}
+            element={<Orders currentCommuter={commuter} />}
           />
 
           <Route

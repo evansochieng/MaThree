@@ -13,6 +13,7 @@ function Info({ values, handleChange, nextStep, setFare, user }) {
 
     // Try grabbing current user
     console.log(user.currentCommuter.name)
+    console.log(values.returnTrip)
     //////////prevStep
   }
 
@@ -72,10 +73,20 @@ function Info({ values, handleChange, nextStep, setFare, user }) {
             <input
               type="text"
               name="contact"
-              placeholder='Enter phone number in the format: 254....'
+              placeholder="Enter phone number in the format: 254...."
               onChange={handleChange("mobileNumber")}
               // defaultValue={values.mobileNumber}
               value={values.mobileNumber}
+              style={{ width: "350px", height: "10px", marginTop: "5px" }}
+            />
+            <br />
+            <label htmlFor="date">Travel Date:</label>
+            <br />
+            <input
+              type="date"
+              name="date"
+              onChange={handleChange("date")}
+              value={values.date}
               style={{ width: "350px", height: "10px", marginTop: "5px" }}
             />
             <br />

@@ -61,7 +61,7 @@ function Summary({values, nextStep,prevStep}) {
         paddingTop: "120px",
       }}
     >
-      <h4>Trip Summary</h4>
+      <h4 style={{fontWeight: "bold"}}>Trip Summary</h4>
       <Card
         style={{
           width: 400,
@@ -79,6 +79,12 @@ function Summary({values, nextStep,prevStep}) {
             <span style={{ float: "left" }}>Phone number:</span>
             {/* <span style={{ float: "right" }}>+254 704 999 704</span> */}
             <span style={{ float: "right" }}>{values.mobileNumber}</span>
+          </div>
+          <br />
+          <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
+            <span style={{ float: "left" }}>Travel Date:</span>
+            {/* <span style={{ float: "right" }}>+254 704 999 704</span> */}
+            <span style={{ float: "right" }}>{values.date}</span>
           </div>
           <br />
           <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
@@ -102,7 +108,7 @@ function Summary({values, nextStep,prevStep}) {
           <div style={{ fontWeight: "bold" }}>
             <span style={{ float: "left" }}>Return Trip:</span>
             {/* <span style={{ float: "right" }}>Yes</span> */}
-            <span style={{ float: "right" }}>{values.returnTrip}</span>
+            <span style={{ float: "right" }}>{values.returnTrip ? values.returnTrip : 'off'}</span>
           </div>
           <br />
           <div

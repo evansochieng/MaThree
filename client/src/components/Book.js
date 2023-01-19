@@ -14,6 +14,7 @@ export class Book extends Component {
   state = {
     step: 1,
     fullName: "",
+    date: "",
     mobileNumber: "",
     pickLocation: "",
     dropLocation: "",
@@ -58,6 +59,7 @@ export class Book extends Component {
     const {
       fullName,
       mobileNumber,
+      date,
       dropLocation,
       pickLocation,
       returnTrip,
@@ -67,6 +69,7 @@ export class Book extends Component {
     const values = {
       fullName,
       mobileNumber,
+      date,
       pickLocation,
       dropLocation,
       route,
