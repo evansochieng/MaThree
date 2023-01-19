@@ -13,7 +13,7 @@ const AdNavbar = () => {
                     </Link>
                 </div>
                 <div>
-                    <p className="title-admin">Admin</p>
+                    <p style={{color:"white", fontSize:"20px", paddingLeft:"20px"}}>Admin</p>
                 </div>
             </div>
         </div>
