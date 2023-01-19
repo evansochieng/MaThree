@@ -13,7 +13,7 @@ const Driver = () => {
     const [pageSize, setPageSize] = useState(10);
 
     const handleDelete = (id) => {
-        setDriver(driver.filter((drivers) => driver.id !== id));
+        setDriver(driver.filter((drivers) => drivers.id !== id));
         fetch(`/drivers${id}`, {
             method: "DELETE",
         })
