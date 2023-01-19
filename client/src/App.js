@@ -99,7 +99,7 @@ function App() {
             path="/home"
             element={<Home currentCommuter={commuter} />}
           />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/about" element={<Driver />} />
           <Route
             exact
             path="/book"
