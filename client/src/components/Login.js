@@ -69,6 +69,10 @@ function Login( {onLogin, isLoggedIn} ) {
       <div>
         Create an account <Link to='/signup' className="auth-route">Register</Link>
       </div>
+
+      <div>
+        Admin Section <Link to='/adminLogin' className="">Admin</Link>
+      </div>
     </div>
   );
 }
