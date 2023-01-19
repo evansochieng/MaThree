@@ -92,7 +92,7 @@ export class Book extends Component {
       case 3:
         return <Payment nextStep={this.nextStep} prevStep={this.prevStep} />;
       case 4:
-        return <Success />;
+        return <Success nextStep={this.nextStep} />;
 
       default:
         console.log("Check if I am working");

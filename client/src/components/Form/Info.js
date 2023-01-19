@@ -8,7 +8,7 @@ function Info({ values, handleChange, nextStep, setFare }) {
     nextStep();
     //////
     // Set the fare here
-    const curRoute = routes.filter((route) => route.name == values.route);
+    const curRoute = routes.filter((route) => route.name === values.route);
     setFare(curRoute[0].fare);
     //////////prevStep
   }

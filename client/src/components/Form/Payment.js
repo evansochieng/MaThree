@@ -1,31 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { BsCheckCircle } from 'react-icons/bs';
-import { TfiCommentsSmiley } from 'react-icons/tfi';
 
-function Payment() {
-  // define a timeout function
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     <div
-  //       style={{
-  //         paddingTop: "150px",
-  //         display: "flex",
-  //         justifyContent: "center",
-  //       }}
-  //     >
-  //       Payment complete. Thank you!
-  //     </div>;
-  //     console.log("Hello you!")
-  //   }, 10000);
-  //   //return () => clearTimeout(timer);
-  // }, []);
-
+function Payment({ nextStep }) {
+  // set state for changing display message
     const [show, setShow] = useState(false);
     useEffect(() => {
       setTimeout(() => {
         setShow(true);
       }, 5000);
     }, []);
+
+    const nextPage = (e) => {
+      e.preventDefault();
+      nextStep();
+    };
 
     return show ? (
       <div
@@ -50,10 +38,19 @@ function Payment() {
         >
           <BsCheckCircle />
         </div>
-        <div style={{ fontSize: "30px", fontWeight: "bold" }}>
-          We will call you when the matatu is ready!
-          <TfiCommentsSmiley style={{ color: "#E3B426" }} />
-        </div>
+  
+        <button
+          onClick={nextPage}
+          style={{
+            //width: "80px"
+            textAlign: "center",
+            fontWeight: "bold",
+            backgroundColor: "#7b5bf2",
+            margin: 'auto'
+          }}
+        >
+          Continue
+        </button>
       </div>
     ) : (
       <div
