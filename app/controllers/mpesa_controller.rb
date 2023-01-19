@@ -61,7 +61,7 @@ class MpesaController < ApplicationController
             "PartyA"=> params[:phone_number],
             "PartyB"=> 174379,
             "PhoneNumber": params[:phone_number],
-            "CallBackURL"=> "http://localhost:3000/payment",
+            "CallBackURL"=> "https://mydomain.com/path",
             "AccountReference"=> "CompanyLtdX",
             "TransactionDesc"=> "Payment of X" 
         }
