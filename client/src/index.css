@@ -30,8 +30,9 @@ label {
 .auth-route {
   margin-top: 1rem;
   text-align: center;
-  color: #FFFCF9;
+  color: #7b5bf2;
   font-size: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 input {
@@ -184,6 +185,29 @@ ul {
   line-height: 2.5rem;
 }
 
+.nav-bar {
+  height: 60px;
+  width: 100%;
+  background-color: #09184d;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 30px;
+  position: sticky;
+}
+
+.menu-bar {
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.title-admin {
+  color: #000;
+  font-size: 1.2rem;
+  padding-left: 30px;
+}
+
 /* End of styling of the Navbar component */
 
 /* Styling of About Component */
@@ -287,7 +311,7 @@ ul {
 }
 
 .info-wrapper {
-  border: 1px solid white;
+  border: 2px solid #09184d;
   padding: 50px;
 }
 
@@ -624,8 +648,8 @@ ul {
   width: 250px;
   margin-bottom: 150;
   /* background-color: transparent; */
-  
-} 
+
+}
 
 
 
@@ -645,10 +669,11 @@ ul {
   width: 150px;
   align-self: hover;
   font-size: medium;
- 
+
 
 
 }
+
 /* .container{
   background-color: #f19a0c;
   width: min-content;
@@ -692,22 +717,22 @@ body,
 
 /* Queries */
 /* Min */
-@media (min-width: 0) {
-  html {
+/* @media (min-width: 0) { */
+/* html {
     font-size: 30%;
-  }
+  } */
 
-  /* body{ min-width: 200px; background: #f0f0ef; }  */
+/* body{ min-width: 200px; background: #f0f0ef; }  */
 
-  /* #page{ padding: 4em; background: #fff; } 
+/* #page{ padding: 4em; background: #fff; } 
 						#page > h2{ color: #444; font-size: 1.25em; font-weight: 600; text-transform: uppercase; } 
 						#page > p{ margin-top: 2em; line-height: 1.25; } */
-  /* #footer {
+/* #footer {
     background: black;
     height: 40%;
   } */
 
-  /* #cta{ padding: 4em; background: #350f55; } 
+/* #cta{ padding: 4em; background: #350f55; } 
 						#cta > h2{ color: #fff; font-size: 2em; font-weight: 600; text-transform: uppercase; text-align: center; } 
 						#cta > p{ margin-top: 1em; color: #ddd; text-align: center; line-height: 1.5; } 
 						#cta > form{ margin: 0 auto; margin-top: 2em; max-width: 40em; } 
@@ -716,13 +741,49 @@ body,
 								#cta > form > input[type=submit]{ position: absolute; top: 0; right: 0; bottom: 0; padding: 1em; height: 4em; color: #fff; font-weight: 600; background: #fe9909; border: 0; cursor: pointer; } 
 								#cta > form > input[type=submit]:hover{ background: #fdca40; }  */
 
-  .maincard{
-    height: 700px;
-    background-color: #000000;
-  }
+
+/* } */
+
+.maincard {
+  height: 700px;
+  background-color: #000000;
 }
 
-h1,h2,h3,.home-title,.mission,.vision {
+h1,
+h2,
+h3,
+.home-title,
+.mission,
+.vision {
   color: #2f2e2e;
 }
 
+.row .icons {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+  color: #7b5bf2;
+}
+
+.row .title {
+  flex: 70%;
+}
+.sidebar-list {
+  width: 100%;
+  padding: 0;
+}
+.sidebar-list .row {
+  height: 100px;
+  text-decoration: none;
+  display: flex;
+  font-size: 1.2rem;
+  flex-direction: row;
+  color:#fff;
+  align-items: center;
+}
+
+.sidebar-list .row:hover {
+  cursor: pointer;
+  background-color: #7b5bf2;
+ 
+}
