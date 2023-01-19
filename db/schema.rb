@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_11_022318) do
+ActiveRecord::Schema.define(version: 2023_01_19_175513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "commuters", force: :cascade do |t|
     t.string "name"
@@ -36,7 +44,7 @@ ActiveRecord::Schema.define(version: 2023_01_11_022318) do
 
   create_table "orders", force: :cascade do |t|
     t.string "name"
-    t.integer "phone_number"
+    t.bigint "phone_number"
     t.string "route"
     t.string "pickup_station"
     t.string "destination"
@@ -47,6 +55,7 @@ ActiveRecord::Schema.define(version: 2023_01_11_022318) do
     t.integer "commuter_id"
     t.integer "route_id"
     t.integer "vehicle_id"
+    t.date "date"
   end
 
   create_table "payments", force: :cascade do |t|

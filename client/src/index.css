@@ -762,7 +762,7 @@ h3,
   flex: 30%;
   display: grid;
   place-items: center;
-  color: #7b5bf2;
+  color: #fff;
 }
 
 .row .title {
@@ -786,4 +786,23 @@ h3,
   cursor: pointer;
   background-color: #7b5bf2;
  
+}
+.sidebar-container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.side-bar {
+  height: calc(100vh - 60px);
+  width: 240px;
+  background-color:#09184d;
+  
+}
+.admin-nav {
+  margin-left: 5rem;
+    background-color: white;
+    min-width: calc(100vw - 240px);
+    grid-column: span 10 / span 10;
+    height: calc(100vh - 60px);
+    overflow: scroll;
 }
