@@ -15,13 +15,13 @@ const SideBar = () => {
         },
         {
             id: 2,
-            link: "/commuters",
+            link: "/commuter",
             title: "Commuters",
             icon: <BsPersonFill />
         },
         {
             id: 3,
-            link: "/drivers",
+            link: "/driver",
             title: "Drivers",
             icon: <BsPersonFill />
         },
