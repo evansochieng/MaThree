@@ -16,6 +16,7 @@ import Commuter from "./adminComponents/Commuter";
 import Driver from "./adminComponents/Driver";
 import CreateDriver from "./adminComponents/CreateDriver";
 import Dashboard from "./adminComponents/Dashboard";
+import SideBar from "./adminComponents/SideBar";
 
 
 function App() {
@@ -149,7 +150,10 @@ function App() {
     return (
       <div>
         {/* <Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} /> */}
+        {/* <SideBar /> */}
+        
         <Routes>
+        
           <Route
             exact
             path="/signup"
@@ -166,12 +170,13 @@ function App() {
             path="/adminSignup"
             element={<AdminSignUp onAddAdmin={addAdmin} />}
           />
-          <Route path="/admin" element={<AdminLanding />} />
-          <Route path='/dash' element={<Dashboard />} />
+          <Route path="/admin/*" element={<AdminLanding />} />
+          {/* <Route path='/dash' element={<Dashboard />} /> */}
           <Route path='/commuter' element={<Commuter />} />
           <Route path='/driver' element={<Driver />} />
           <Route path='/createDriver' element={<CreateDriver onAddDriver={addDriver} />} />
         </Routes>
+
       </div>
     );
 

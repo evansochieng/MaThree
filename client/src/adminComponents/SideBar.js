@@ -10,26 +10,26 @@ const SideBar = () => {
     const data = [
         {
             id: 1,
-            link: "/admin",
+            link: "/admin/*",
             title: "Dashboard",
             icon: <FaThLarge />
         },
         {
             id: 2,
-            link: "/commuter",
+            link: "/admin/commuter",
             title: "Commuters",
             icon: <BsPersonFill />
         },
         {
             id: 3,
-            link: "/driver",
+            link: "/admin/driver",
             title: "Drivers",
             icon: <BsPersonFill />
         },
 
         {
             id: 4,
-            link: "/createDriver",
+            link: "/admin/createDriver",
             title: "Add Driver",
             icon: <BsFillPersonPlusFill />
         },
