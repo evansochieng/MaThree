@@ -8,9 +8,13 @@ import Success from "./Form/Success";
 
 
 export class Book extends Component {
+
+  user = this.props
+
   state = {
     step: 1,
     fullName: "",
+    date: "",
     mobileNumber: "",
     pickLocation: "",
     dropLocation: "",
@@ -55,6 +59,7 @@ export class Book extends Component {
     const {
       fullName,
       mobileNumber,
+      date,
       dropLocation,
       pickLocation,
       returnTrip,
@@ -64,6 +69,7 @@ export class Book extends Component {
     const values = {
       fullName,
       mobileNumber,
+      date,
       pickLocation,
       dropLocation,
       route,
@@ -79,6 +85,7 @@ export class Book extends Component {
             handleChange={this.handleChange}
             setFare={this.setFare}
             values={values}
+            user={this.user}
           />
         );
       case 2:
@@ -90,9 +97,9 @@ export class Book extends Component {
           />
         );
       case 3:
-        return <Payment nextStep={this.nextStep} prevStep={this.prevStep} />;
+        return <Payment nextStep={this.nextStep} prevStep={this.prevStep} values={values} />;
       case 4:
-        return <Success />;
+        return <Success nextStep={this.nextStep} />;
 
       default:
         console.log("Check if I am working");

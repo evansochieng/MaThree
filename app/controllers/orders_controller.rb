@@ -13,6 +13,16 @@ class OrdersController < ApplicationController
     render json: @order
   end
 
+  # GET /rides/:name
+  def myorders
+    myrequests = Order.where(name: params[:name])
+    if myrequests
+      render json: myrequests
+    else
+      render json: {error: ["No orders yet"]}, status: :unauthorized
+    end
+  end
+
   # POST /orders
   def create
     @order = Order.new(order_params)
@@ -46,6 +56,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:name, :phone_number, :route, :pickup_station, :destination, :return_trip, :fare)
+      params.require(:order).permit(:name, :phone_number, :route, :pickup_station, :destination, :return_trip, :fare, :date)
     end
 end

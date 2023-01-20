@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function Info({ values, handleChange, nextStep, setFare }) {
+function Info({ values, handleChange, nextStep, setFare, user }) {
   // define state for routes
   const [routes, setRoutes] = useState([])
   const nextPage = e => {
@@ -8,8 +8,12 @@ function Info({ values, handleChange, nextStep, setFare }) {
     nextStep();
     //////
     // Set the fare here
-    const curRoute = routes.filter((route) => route.name == values.route);
+    const curRoute = routes.filter((route) => route.name === values.route);
     setFare(curRoute[0].fare);
+
+    // Try grabbing current user
+    console.log(user.currentCommuter.name)
+    console.log(values.returnTrip)
     //////////prevStep
   }
 
@@ -69,10 +73,20 @@ function Info({ values, handleChange, nextStep, setFare }) {
             <input
               type="text"
               name="contact"
-              placeholder='Enter phone number in the format: 254....'
+              placeholder="Enter phone number in the format: 254...."
               onChange={handleChange("mobileNumber")}
               // defaultValue={values.mobileNumber}
               value={values.mobileNumber}
+              style={{ width: "350px", height: "10px", marginTop: "5px" }}
+            />
+            <br />
+            <label htmlFor="date">Travel Date:</label>
+            <br />
+            <input
+              type="date"
+              name="date"
+              onChange={handleChange("date")}
+              value={values.date}
               style={{ width: "350px", height: "10px", marginTop: "5px" }}
             />
             <br />

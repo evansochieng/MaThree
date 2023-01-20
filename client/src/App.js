@@ -9,6 +9,12 @@ import Contact from "./components/Contact";
 import Logout from "./components/Logout";
 import Login from "./components/Login"
 import NavBar from './components/NavBar';
+import AdminLogin from "./adminComponents/AdminLogin";
+import AdminSignUp from "./adminComponents/AdminSignUp";
+import Orders from "./components/Orders";
+import AdminLanding from "./adminComponents/AdminLanding";
+import Commuter from "./adminComponents/Commuter";
+import Driver from "./adminComponents/Driver";
 
 export const UserContext = createContext();
 
@@ -62,7 +68,7 @@ function App() {
   }, []);
   useEffect(() =>{
     fetch("/admins").then((res) =>res.json()).then(setAdmin);
-  })
+  }, [])
 
   function addUser(newUser) {
     const updateUsersArray = [...users, newUser];
@@ -74,13 +80,27 @@ function App() {
     setAdmin(updateAdmin)
   }
 
+  //////////////////////////
+  // fetch drivers data
+  const [driver, setDriver] = useState([]);
+
+  useEffect(() => {
+    fetch("/drivers")
+      .then((r) => r.json())
+      .then(setDriver);
+  }, []);
+
+  function addDriver(newDriver) {
+    const updateDriver = [...driver, newDriver];
+    setDriver(updateDriver);
+  }
+  //////////////////////////
+
   if (isLoggedIn) {
     return (
-
       <div>
         <NavBar />
         <Routes>
-
           {/* <Route
             exact
             path="/signup"
@@ -98,14 +118,17 @@ function App() {
             path="/home"
             element={<Home currentCommuter={commuter} />}
           />
-          <Route exact path="/about" element={<Driver />} />
+          <Route exact path="/about" element={<About />} />
           <Route
             exact
             path="/book"
             element={<Book currentCommuter={commuter} />}
           />
-
-
+          <Route
+            exact
+            path="/orders"
+            element={<Orders currentCommuter={commuter} />}
+          />
 
           <Route
             exact
@@ -137,19 +160,17 @@ function App() {
             path="/login"
             element={<Login onLogin={setCommuter} isLoggedIn={setIsLoggedIn} />}
           />
-          <Route
-            path="/adminLogin"
-            element={<AdminLogin />} />
+          <Route path="/adminLogin" element={<AdminLogin />} />
 
-            <Route
+          <Route
             path="/adminSignup"
             element={<AdminSignUp onAddAdmin={addAdmin} />}
-             />
-
+          />
+          <Route path="/admin" element={<AdminLanding />} />
+          <Route path="/commuter" element={<Commuter />} />
+          <Route path="/driver" element={<Driver onAddDriver={addDriver} />} />
         </Routes>
-
       </div>
-
     );
 
   }
