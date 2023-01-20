@@ -62,8 +62,8 @@ class MpesaController < ApplicationController
             "PartyB"=> 174379,
             "PhoneNumber": params[:phone_number],
             "CallBackURL"=> "https://mydomain.com/path",
-            "AccountReference"=> "CompanyLtdX",
-            "TransactionDesc"=> "Payment of X" 
+            "AccountReference"=> "Mathree",
+            "TransactionDesc"=> "Payment of ride" 
         }
 
         headers = {

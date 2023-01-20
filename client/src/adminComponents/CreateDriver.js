@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
 const CreateDriver = ({ onAddDriver }) => {
@@ -52,7 +52,7 @@ const CreateDriver = ({ onAddDriver }) => {
                         onAddDriver(data)
                     })
                     alert("Signup Successful!")
-                    return navigate('/*')
+                    return navigate('/admin')
                 } else {
                     res.json().then(err => {
                         console.log(err.errors)
@@ -77,7 +77,6 @@ const CreateDriver = ({ onAddDriver }) => {
 
     return (
         <div className="auth-form-container">
-            <h1 className="app-title">Mathree</h1>
             <div className="SignUpController">
                 <form className="register-form">
                     <h1>Create Account</h1>

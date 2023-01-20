@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { createContext } from "react";
 import Home from "./components/Home";
 import Register from "./components/Register";
 import About from "./components/About";
@@ -15,8 +14,9 @@ import Orders from "./components/Orders";
 import AdminLanding from "./adminComponents/AdminLanding";
 import Commuter from "./adminComponents/Commuter";
 import Driver from "./adminComponents/Driver";
+import CreateDriver from "./adminComponents/CreateDriver";
+import Dashboard from "./adminComponents/Dashboard";
 
-export const UserContext = createContext();
 
 function App() {
 
@@ -66,8 +66,8 @@ function App() {
   useEffect(() => {
     fetch("/commuters").then((r) => r.json()).then(setUsers);
   }, []);
-  useEffect(() =>{
-    fetch("/admins").then((res) =>res.json()).then(setAdmin);
+  useEffect(() => {
+    fetch("/admins").then((res) => res.json()).then(setAdmin);
   }, [])
 
   function addUser(newUser) {
@@ -167,8 +167,10 @@ function App() {
             element={<AdminSignUp onAddAdmin={addAdmin} />}
           />
           <Route path="/admin" element={<AdminLanding />} />
-          <Route path="/commuter" element={<Commuter />} />
-          <Route path="/driver" element={<Driver onAddDriver={addDriver} />} />
+          <Route path='/dash' element={<Dashboard />} />
+          <Route path='/commuter' element={<Commuter />} />
+          <Route path='/driver' element={<Driver />} />
+          <Route path='/createDriver' element={<CreateDriver onAddDriver={addDriver} />} />
         </Routes>
       </div>
     );

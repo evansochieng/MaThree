@@ -27,7 +27,7 @@ const AdminLogin = () => {
                         console.log(user)
                     });
                     alert("Login successful")
-                    return navigate('/*')
+                    return navigate('/admin')
                 } else {
                     res.json().then(err => {
                         setError(err.error);
