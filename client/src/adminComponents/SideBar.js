@@ -36,7 +36,7 @@ const SideBar = () => {
 
         {
             id: 5,
-            link: "/",
+            link: "/login",
             title: "Logout",
             icon: <MdLogout />
         },
