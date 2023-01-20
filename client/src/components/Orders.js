@@ -11,6 +11,7 @@ const Orders = ({ currentCommuter }) => {
         .then((res) => res.json())
         .then((orderArr) => {
           setOrders(orderArr);
+          console.log(orders)
           console.log(orderArr)
         })
         .catch((error) => {
@@ -50,9 +51,21 @@ const Orders = ({ currentCommuter }) => {
     ));
 
   return (
-    <div style={{ marginTop: "120px", display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-      <div style={{fontWeight: 'bold', marginBottom: '40px'}}>My Rides</div>
-      <div className="row">{myorders}</div>
+    <div
+      style={{
+        marginTop: "120px",
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ fontWeight: "bold", marginBottom: "40px" }}>My Rides</div>
+      {orders.length == 0 ? (
+        <div style={{color: 'black', fontSize: '20px', fontWeight: 'bold'}}>You have no rides yet!</div>
+      ) : (
+        <div className="row">{myorders}</div>
+      )}
     </div>
   );
 }
