@@ -4,6 +4,7 @@ import Commuter from './Commuter'
 import CreateDriver from './CreateDriver'
 import Dashboard from './Dashboard'
 import Driver from './Driver'
+import SideBar from './SideBar'
 
 const AdminRoute = () => {
 
@@ -21,11 +22,12 @@ const AdminRoute = () => {
 
     return (
         <div>
+            {/* <SideBar /> */}
             <Routes>
-                {/* <Route path='/dash' element={<Dashboard />} />
+                <Route path='/*' element={<Dashboard />} />
                 <Route path='/commuter' element={<Commuter />} />
                 <Route path='/driver' element={<Driver  />} />
-                <Route path='/createDriver' element={<CreateDriver onAddDriver={addDriver} />} /> */}
+                <Route path='/createDriver' element={<CreateDriver onAddDriver={addDriver} />} />
             </Routes>
         </div>
     )

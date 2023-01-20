@@ -149,9 +149,7 @@ const CreateDriver = ({ onAddDriver }) => {
 
 
             </div>
-            <div>
-                <p>Already have an account? <Link to='/login' className="auth-route">Login</Link></p>
-            </div>
+            
         </div>
     )
 }
