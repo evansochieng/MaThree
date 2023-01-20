@@ -9,9 +9,6 @@ import Contact from "./components/Contact";
 import Logout from "./components/Logout";
 import Login from "./components/Login"
 import NavBar from './components/NavBar';
-import AdminLogin from "./adminComponents/AdminLogin";
-import AdminSignUp from "./adminComponents/AdminSignUp";
-import Driver from "./adminComponents/Driver";
 
 export const UserContext = createContext();
 
@@ -64,7 +61,7 @@ function App() {
     fetch("/commuters").then((r) => r.json()).then(setUsers);
   }, []);
   useEffect(() =>{
-    fetch("/admin").then((res) =>res.json()).then(setAdmin);
+    fetch("/admins").then((res) =>res.json()).then(setAdmin);
   })
 
   function addUser(newUser) {
