@@ -41,6 +41,7 @@ const Home = ( {currentCommuter} ) => {
        
         <div>
           {console.log(currentCommuter)}
+          {/* <br></br>
           <br></br>
           <br></br>
           <br></br>
@@ -52,17 +53,16 @@ const Home = ( {currentCommuter} ) => {
           <br></br>
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
+          <br></br> */}
           
           
         
         </div>
-        <div>
+        {/* <div>
             {routes.map((route, id) => (
               <Cards {...route} key={id} />
             ))}
-          </div>
+          </div> */}
       </div>
     );
 }

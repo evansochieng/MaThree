@@ -41,7 +41,7 @@ function Logout({isLoggedIn}) {
         //width: "400px",
       }}
     >
-      <h3 style={{ color: "#fb923c" }}>I am sad to see you go</h3>
+      <h3 style={{ color: "#fb923c" }}>We are sad to see you go</h3>
       <p>Are you sure you want to sign out?</p>
       <ImSad style={{ color: "#fcd34d", fontSize: "50px" }} />
       <button

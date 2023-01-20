@@ -63,7 +63,7 @@ body = {
     "PartyB"=> 174379,
     "PhoneNumber": 254704999704,
     "CallBackURL"=> "https://mydomain.com/path",
-    "AccountReference"=> "CompanyLtdX",
+    "AccountReference"=> "Mathree",
     "TransactionDesc"=> "Payment of X" 
   }
 

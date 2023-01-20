@@ -2,6 +2,7 @@ import React from 'react'
 import { BsPersonFill } from 'react-icons/bs'
 import { FaThLarge } from 'react-icons/fa'
 import { MdLogout } from 'react-icons/md'
+import {BsFillPersonPlusFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
 const SideBar = () => {
@@ -28,7 +29,14 @@ const SideBar = () => {
 
         {
             id: 4,
-            link: "/",
+            link: "/createDriver",
+            title: "Add Driver",
+            icon: <BsFillPersonPlusFill />
+        },
+
+        {
+            id: 5,
+            link: "/login",
             title: "Logout",
             icon: <MdLogout />
         },
