@@ -61,7 +61,7 @@ const Orders = ({ currentCommuter }) => {
       }}
     >
       <div style={{ fontWeight: "bold", marginBottom: "40px" }}>My Rides</div>
-      {orders.length == 0 ? (
+      {orders.length === 0 ? (
         <div style={{color: 'black', fontSize: '20px', fontWeight: 'bold'}}>You have no rides yet!</div>
       ) : (
         <div className="row">{myorders}</div>

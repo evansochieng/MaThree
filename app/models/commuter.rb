@@ -10,4 +10,5 @@ class Commuter < ApplicationRecord
     validates :name, :phone_number, :id_number, presence: true
     validates :password, length: {minimum: 8}
     validates :username, uniqueness: true, presence: true
+    #validates :phone_number, length: { is: 12}, presence: true
 end
