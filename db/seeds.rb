@@ -10,13 +10,13 @@
 route1 = Route.create(
     name: "Thika Road 1", from: "Thika", to: "UpperHill", 
     description: "Route from Thika town, through Thika Road, upto UpperHill and its environments.",
-    fare: 150
+    fare: 250
 )
 
 route2 = Route.create(
     name: "Waiyaki Way 1", from: "Kikuyu", to: "UpperHill", 
     description: "Route from Kikuyu town, through Waiyaki Way, upto UpperHill and its environments.",
-    fare: 150
+    fare: 160
 )
 
 route3 = Route.create(
@@ -28,11 +28,11 @@ route3 = Route.create(
 route4 = Route.create(
     name: "Mombasa Road 1", from: "Kitengela", to: "UpperHill", 
     description: "Route from Kitengela, through Mombasa Road, upto UpperHill and its environments.",
-    fare: 150
+    fare: 200
 )
 
 route5 = Route.create(
-    name: "Ngong Road 1", from: "Karen", to: "Westlands", 
-    description: "Route from Karen, through Ngong Road, UpperHill, upto Westlands and its environments.",
-    fare: 150
+    name: "Lang'ata Road 1", from: "Rongai", to: "Westlands", 
+    description: "Route from Ongata Rongai, through Lang'ata Road, UpperHill, upto Westlands and its environments.",
+    fare: 300
 )
